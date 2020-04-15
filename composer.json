@@ -1,0 +1,48 @@
+{
+  "name": "jazzica/wechange",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 integration for the WECHANGE platform (https://wechange.de/)",
+  "authors": [
+    {
+      "name": "Jessica Schlierenkamp",
+      "role": "Developer"
+    }
+  ],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "typo3/testing-framework": "^4",
+    "friendsofphp/php-cs-fixer": "^2.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "JS\\Wechange\\": "Classes"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JS\\Wechange\\Tests\\": "Tests"
+    }
+  },
+  "replace": {
+    "wechange": "self.version"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+    ]
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web",
+      "extension-key": "wechange"
+    }
+  }
+}
