@@ -31,7 +31,8 @@
     }
   },
   "replace": {
-    "wechange": "self.version"
+    "jazzica/wechange": "self.version",
+    "typo3-ter/wechange": "self.version"
   },
   "scripts": {
     "post-autoload-dump": [
