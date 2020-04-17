@@ -31,6 +31,16 @@ class ProjectRepository
 
     public function findForFilter(ProjectFilter $projectFilter): array
     {
-        return $this->apiService->makeRequest($this->apiBaseUrl . self::API_SLUG . '?parent=' . $projectFilter->getParent());
+        $queryString = [];
+
+        if ($parent = $projectFilter->getParent()) {
+            $queryString[] = 'parent=' . $parent;
+        }
+
+        if ($tag = $projectFilter->getTag()) {
+            $queryString[] = 'tags=' . $tag;
+        }
+
+        return $this->apiService->makeRequest($this->apiBaseUrl . self::API_SLUG . '?' . implode('&', $queryString));
     }
 }
