@@ -81,7 +81,7 @@ class ProjectRepository
     {
         if ($orderBy = $projectFilter->getOrderBy()) {
             usort($projects, static function ($item1, $item2) use ($orderBy) {
-                return strcmp($item1->$orderBy, $item2->$orderBy);
+                return strcasecmp($item1->$orderBy, $item2->$orderBy);
             });
 
             if ($projectFilter->getOrderDir() === ProjectFilter::ORDER_DESC) {
