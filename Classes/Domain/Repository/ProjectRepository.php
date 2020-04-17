@@ -31,6 +31,16 @@ class ProjectRepository
 
     public function findForFilter(ProjectFilter $projectFilter): array
     {
+        return $this->apiService->makeRequest($this->buildQueryStringForFilter($projectFilter));
+    }
+
+    /**
+     * @param ProjectFilter $projectFilter
+     *
+     * @return string
+     */
+    private function buildQueryStringForFilter(ProjectFilter $projectFilter): string
+    {
         $queryString = [];
 
         if ($parent = $projectFilter->getParent()) {
@@ -45,6 +55,6 @@ class ProjectRepository
             $queryString[] = 'limit=' . $limit;
         }
 
-        return $this->apiService->makeRequest($this->apiBaseUrl . self::API_SLUG . '?' . implode('&', $queryString));
+        return $this->apiBaseUrl . self::API_SLUG . '?' . implode('&', $queryString);
     }
 }
