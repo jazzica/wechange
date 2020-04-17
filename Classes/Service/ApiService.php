@@ -18,7 +18,7 @@ class ApiService
      * @param string $requestUrl
      *
      * @return array
-     * @throws JsonDecodeException
+     * @throws \JsonException
      */
     public function makeRequest(string $requestUrl): array
     {
@@ -30,15 +30,7 @@ class ApiService
         curl_close($cURLHandle);
 
         if ($cURLHTTPCode === 200) {
-            try {
-                $cURLResult = json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR);
-            } catch (\JsonException $e) {
-                throw new JsonDecodeException(sprintf(
-                    'Decoding JSON failed for cURL request \'%s\' with the following message: %s',
-                    $requestUrl,
-                    $e->getMessage()
-                ));
-            }
+            $cURLResult = json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR);
 
             $elements = [];
             foreach ($cURLResult->results as $cURLResult) {

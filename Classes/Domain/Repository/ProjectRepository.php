@@ -9,23 +9,28 @@ declare(strict_types = 1);
 
 namespace JS\Wechange\Domain\Repository;
 
+use JS\Wechange\Domain\Model\Filter\ProjectFilter;
 use JS\Wechange\Service\ApiService;
 
 class ProjectRepository
 {
+    private const API_SLUG = 'projects/';
 
     /**
      * @var ApiService
      */
     private ApiService $apiService;
 
-    public function __construct(ApiService $apiService)
+    private string $apiBaseUrl;
+
+    public function __construct(string $apiBaseUrl, ApiService $apiService)
     {
+        $this->apiBaseUrl = $apiBaseUrl;
         $this->apiService = $apiService;
     }
 
-    public function findForFilter(int $parent): array
+    public function findForFilter(ProjectFilter $projectFilter): array
     {
-        return $this->apiService->makeRequest('https://wechange.de/api/v2/projects/?parent=' . $parent);
+        return $this->apiService->makeRequest($this->apiBaseUrl . self::API_SLUG . '?parent=' . $projectFilter->getParent());
     }
 }
