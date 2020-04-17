@@ -12,6 +12,9 @@
     "GPL-2.0-or-later"
   ],
   "config": {
+    "platform": {
+      "php": "7.4"
+    },
     "vendor-dir": ".Build/vendor",
     "bin-dir": ".Build/bin"
   },
