@@ -31,7 +31,10 @@ class ProjectRepository
 
     public function findForFilter(ProjectFilter $projectFilter): array
     {
-        return $this->apiService->makeRequest($this->buildQueryStringForFilter($projectFilter));
+        $projects = $this->apiService->makeRequest($this->buildQueryStringForFilter($projectFilter));
+        $this->sort($projects, $projectFilter);
+
+        return $projects;
     }
 
     /**
@@ -56,5 +59,24 @@ class ProjectRepository
         }
 
         return $this->apiBaseUrl . self::API_SLUG . '?' . implode('&', $queryString);
+    }
+
+    /**
+     * @param array $projects
+     * @param ProjectFilter $projectFilter
+     *
+     * @return void
+     */
+    private function sort(array &$projects, ProjectFilter $projectFilter): void
+    {
+        if ($orderBy = $projectFilter->getOrderBy()) {
+            usort($projects, static function ($item1, $item2) use ($orderBy) {
+                return strcmp($item1->$orderBy, $item2->$orderBy);
+            });
+
+            if ($projectFilter->getOrderDir() === ProjectFilter::ORDER_DESC) {
+                $projects = array_reverse($projects);
+            }
+        }
     }
 }

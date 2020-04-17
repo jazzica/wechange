@@ -38,6 +38,39 @@ class ProjectRepositoryTest extends UnitTestCase
         self::assertCount($expectedCount, $projectRepository->findForFilter($projectFilter));
     }
 
+    /**
+     * @test
+     *
+     * @covers       \JS\Wechange\Domain\Repository\ProjectRepository::findForFilter
+     *
+     * @param int $expectedCount
+     * @param ProjectFilter $projectFilter
+     */
+    public function findForFilterOrdered(): void
+    {
+        $projectRepository = new ProjectRepository(
+            self::API_BASE_URL,
+            new ApiService()
+        );
+
+        $baseProjects = $projectRepository->findForFilter(new ProjectFilter(
+            0,
+            '',
+            2
+        ));
+//print_r($baseProjects);
+        $orderedProjects = $projectRepository->findForFilter(new ProjectFilter(
+            0,
+            '',
+            2,
+            'name',
+            ProjectFilter::ORDER_DESC
+        ));
+
+        self::assertEquals($baseProjects[0], $orderedProjects[1]);
+        self::assertEquals($baseProjects[1], $orderedProjects[0]);
+    }
+
     public function findForFilterDataProvider(): array
     {
         return [
