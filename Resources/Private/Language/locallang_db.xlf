@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-17T20:40:35Z">
+        <body>
+			<trans-unit id="plugin.projects" xml:space="preserve">
+				<source>WECHANGE: Projects</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
