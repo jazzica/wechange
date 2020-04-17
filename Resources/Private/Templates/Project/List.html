@@ -4,7 +4,11 @@
 <f:layout name="Default"/>
 
 <f:section name="main">
-    WECHANGE PROJECT LIST VIEW
+    <ul>
+        <f:for as="project" each="{projects}">
+            <li>{project.name}</li>
+        </f:for>
+    </ul>
 </f:section>
 
 </html>
