@@ -27,6 +27,7 @@ class ProjectRepositoryTest extends UnitTestCase
      *
      * @param int $expectedCount
      * @param ProjectFilter $projectFilter
+     * @throws \JsonException
      */
     public function findForFilter(int $expectedCount, ProjectFilter $projectFilter): void
     {
@@ -45,6 +46,7 @@ class ProjectRepositoryTest extends UnitTestCase
      *
      * @param int $expectedCount
      * @param ProjectFilter $projectFilter
+     * @throws \JsonException
      */
     public function findForFilterOrdered(): void
     {
@@ -58,7 +60,7 @@ class ProjectRepositoryTest extends UnitTestCase
             '',
             2
         ));
-//print_r($baseProjects);
+
         $orderedProjects = $projectRepository->findForFilter(new ProjectFilter(
             0,
             '',

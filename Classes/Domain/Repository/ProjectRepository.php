@@ -23,12 +23,22 @@ class ProjectRepository
 
     private string $apiBaseUrl;
 
+    /**
+     * @param string $apiBaseUrl
+     * @param ApiService $apiService
+     */
     public function __construct(string $apiBaseUrl, ApiService $apiService)
     {
         $this->apiBaseUrl = $apiBaseUrl;
         $this->apiService = $apiService;
     }
 
+    /**
+     * @param ProjectFilter $projectFilter
+     *
+     * @return array
+     * @throws \JsonException
+     */
     public function findForFilter(ProjectFilter $projectFilter): array
     {
         $projects = $this->apiService->makeRequest($this->buildQueryStringForFilter($projectFilter));
