@@ -35,12 +35,13 @@ class ProjectRepositoryTest extends UnitTestCase
             new ApiService()
         );
 
-        self::assertCount(1, $projectRepository->findForFilter($projectFilter));
+        self::assertCount($expectedCount, $projectRepository->findForFilter($projectFilter));
     }
 
     public function findForFilterDataProvider(): array
     {
         return [
+            'find with empty filter' => [10, new ProjectFilter()],
             'find for parent' => [1, new ProjectFilter(6454)],
             'find for tag' => [1, new ProjectFilter(0, 'cop26')]
         ];
