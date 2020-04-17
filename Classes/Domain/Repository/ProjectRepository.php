@@ -41,6 +41,10 @@ class ProjectRepository
             $queryString[] = 'tags=' . $tag;
         }
 
+        if ($limit = $projectFilter->getLimit()) {
+            $queryString[] = 'limit=' . $limit;
+        }
+
         return $this->apiService->makeRequest($this->apiBaseUrl . self::API_SLUG . '?' . implode('&', $queryString));
     }
 }

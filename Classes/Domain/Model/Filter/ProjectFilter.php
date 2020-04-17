@@ -15,10 +15,13 @@ class ProjectFilter
 
     private string $tag;
 
-    public function __construct(int $parent = 0, string $tag = '')
+    private int $limit;
+
+    public function __construct(int $parent = 0, string $tag = '', int $limit = 10)
     {
         $this->parent = $parent;
         $this->tag = $tag;
+        $this->limit = $limit;
     }
 
     /**
@@ -35,5 +38,13 @@ class ProjectFilter
     public function getTag(): string
     {
         return $this->tag;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLimit(): int
+    {
+        return $this->limit;
     }
 }

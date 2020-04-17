@@ -42,8 +42,10 @@ class ProjectRepositoryTest extends UnitTestCase
     {
         return [
             'find with empty filter' => [10, new ProjectFilter()],
+            'find with empty filter, but limit is set' => [5, new ProjectFilter(0, '', 5)],
             'find for parent' => [1, new ProjectFilter(6454)],
-            'find for tag' => [1, new ProjectFilter(0, 'cop26')]
+            'find for tag' => [1, new ProjectFilter(0, 'cop26')],
+            'find for parent and tag' => [1, new ProjectFilter(6428, 'Inspirationen')]
         ];
     }
 }
