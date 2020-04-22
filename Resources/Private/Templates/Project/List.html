@@ -4,11 +4,22 @@
 <f:layout name="Default"/>
 
 <f:section name="main">
-    <ul>
+    <div class="card-deck">
         <f:for as="project" each="{projects}">
-            <li>{project.name}</li>
+            <div class="card">
+                <f:if condition="{project.avatar}">
+                    <img src="{project.avatar}" class="card-img-top" alt="{project.name}">
+                </f:if>
+                <div class="card-body">
+                    <h5 class="card-title">{project.name}</h5>
+                    <p class="card-text">{project.description}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{project.website}</small>
+                </div>
+            </div>
         </f:for>
-    </ul>
+    </div>
 </f:section>
 
 </html>
