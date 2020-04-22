@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-17T20:40:35Z">
+        <body>
+            <trans-unit id="project.name" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.projects" xml:space="preserve">
+				<source>WECHANGE: Projects</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.parent" xml:space="preserve">
+				<source>Parent Project</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.tag" xml:space="preserve">
+				<source>Tag</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderBy" xml:space="preserve">
+				<source>Order by</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderDir" xml:space="preserve">
+				<source>Order direction</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderDir.asc" xml:space="preserve">
+				<source>ASC</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderDir.desc" xml:space="preserve">
+				<source>DESC</source>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.limit" xml:space="preserve">
+				<source>Limit</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
