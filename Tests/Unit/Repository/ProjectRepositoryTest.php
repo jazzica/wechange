@@ -44,8 +44,6 @@ class ProjectRepositoryTest extends UnitTestCase
      *
      * @covers       \JS\Wechange\Domain\Repository\ProjectRepository::findForFilter
      *
-     * @param int $expectedCount
-     * @param ProjectFilter $projectFilter
      * @throws \JsonException
      */
     public function findForFilterOrdered(): void
@@ -58,7 +56,9 @@ class ProjectRepositoryTest extends UnitTestCase
         $baseProjects = $projectRepository->findForFilter(new ProjectFilter(
             0,
             '',
-            2
+            2,
+            'name',
+            ProjectFilter::ORDER_ASC
         ));
 
         $orderedProjects = $projectRepository->findForFilter(new ProjectFilter(
