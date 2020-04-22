@@ -41,34 +41,12 @@ class ProjectRepository
      */
     public function findForFilter(ProjectFilter $projectFilter): array
     {
-        $projects = $this->apiService->makeRequest($this->buildQueryStringForFilter($projectFilter));
+        $projects = $this->apiService->makeRequest(
+            $this->apiBaseUrl . self::API_SLUG . '?' . $projectFilter->buildQueryString()
+        );
         $this->sort($projects, $projectFilter);
 
         return $projects;
-    }
-
-    /**
-     * @param ProjectFilter $projectFilter
-     *
-     * @return string
-     */
-    private function buildQueryStringForFilter(ProjectFilter $projectFilter): string
-    {
-        $queryString = [];
-
-        if ($parent = $projectFilter->getParent()) {
-            $queryString[] = 'parent=' . $parent;
-        }
-
-        if ($tag = $projectFilter->getTag()) {
-            $queryString[] = 'tags=' . $tag;
-        }
-
-        if ($limit = $projectFilter->getLimit()) {
-            $queryString[] = 'limit=' . $limit;
-        }
-
-        return $this->apiBaseUrl . self::API_SLUG . '?' . implode('&', $queryString);
     }
 
     /**

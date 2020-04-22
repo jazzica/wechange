@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace JS\Wechange\Domain\Model\Filter;
 
-class ProjectFilter
+class ProjectFilter implements FilterInterface
 {
     public const ORDER_ASC = 'ASC';
     public const ORDER_DESC = 'DESC';
@@ -72,5 +72,27 @@ class ProjectFilter
     public function getOrderDir(): string
     {
         return $this->orderDir;
+    }
+
+    /**
+     * @return string
+     */
+    public function buildQueryString(): string
+    {
+        $queryString = [];
+
+        if ($parent = $this->getParent()) {
+            $queryString[] = 'parent=' . $parent;
+        }
+
+        if ($tag = $this->getTag()) {
+            $queryString[] = 'tags=' . $tag;
+        }
+
+        if ($limit = $this->getLimit()) {
+            $queryString[] = 'limit=' . $limit;
+        }
+
+        return implode('&', $queryString);
     }
 }
