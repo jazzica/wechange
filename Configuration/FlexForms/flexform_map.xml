@@ -7,7 +7,109 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-
+                    <settings.filter.showPeople>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.showPeople
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.showPeople>
+                    <settings.filter.showEvents>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.showEvents
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.showEvents>
+                    <settings.filter.showProjects>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.showProjects
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.showProjects>
+                    <settings.filter.showGroups>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.showGroups
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.showGroups>
+                    <settings.filter.showIdeas>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.showIdeas
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.showIdeas>
+                    <settings.filter.limit>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.limit
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim,int</eval>
+                                <default>1000</default>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.limit>
                 </el>
             </ROOT>
         </sDEF>

@@ -34,6 +34,24 @@
             <trans-unit id="plugin.map" xml:space="preserve">
 				<source>WECHANGE: Map</source>
 			</trans-unit>
+            <trans-unit id="plugin.map.filter.showPeople" xml:space="preserve">
+				<source>show People</source>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.showEvents" xml:space="preserve">
+				<source>show Events</source>
+			</trans-unit>
+			<trans-unit id="plugin.map.filter.showProjects" xml:space="preserve">
+				<source>show Projects</source>
+			</trans-unit>
+			<trans-unit id="plugin.map.filter.showGroups" xml:space="preserve">
+				<source>show Groups</source>
+			</trans-unit>
+			<trans-unit id="plugin.map.filter.showIdeas" xml:space="preserve">
+				<source>show Ideas</source>
+			</trans-unit>
+			<trans-unit id="plugin.map.filter.limit" xml:space="preserve">
+				<source>Limit</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

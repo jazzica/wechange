@@ -16,7 +16,14 @@ class MapController extends ActionController
 {
     public function showAction(): void
     {
-        $mapFilter = new MapFilter();
+        $mapFilter = new MapFilter(
+            (bool)$this->settings['filter']['showPeople'],
+            (bool)$this->settings['filter']['showEvents'],
+            (bool)$this->settings['filter']['showProjects'],
+            (bool)$this->settings['filter']['showGroups'],
+            (bool)$this->settings['filter']['showIdeas'],
+            (int)$this->settings['filter']['limit']
+        );
         $this->view->assign('iframeSource',
             $this->settings['map']['baseUrl'] . 'map/embed/?' . $mapFilter->buildQueryString());
     }
