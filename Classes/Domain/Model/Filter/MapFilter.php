@@ -9,14 +9,19 @@ declare(strict_types = 1);
 
 namespace JS\Wechange\Domain\Model\Filter;
 
+use JS\Wechange\Domain\Model\Coordinate;
+
 class MapFilter implements FilterInterface
 {
-    public bool $showPeople;
-    public bool $showEvents;
-    public bool $showProjects;
-    public bool $showGroups;
-    public bool $showIdeas;
-    public int $limit;
+    private bool $showPeople;
+    private bool $showEvents;
+    private bool $showProjects;
+    private bool $showGroups;
+    private bool $showIdeas;
+    private int $limit;
+
+    private Coordinate $neCoordinates;
+    private Coordinate $swCoordinates;
 
     public function __construct(
         bool $showPeople = true,
@@ -24,7 +29,9 @@ class MapFilter implements FilterInterface
         bool $showProjects = true,
         bool $showGroups = true,
         bool $showIdeas = true,
-        int $limit = 1000
+        int $limit = 1000,
+        Coordinate $neCoordinates = null,
+        Coordinate $swCoordinates = null
     ) {
         $this->showPeople = $showPeople;
         $this->showEvents = $showEvents;
@@ -32,6 +39,9 @@ class MapFilter implements FilterInterface
         $this->showGroups = $showGroups;
         $this->showIdeas = $showIdeas;
         $this->limit = $limit;
+
+        $this->neCoordinates = $neCoordinates ?? new Coordinate(56.54737, 31.9043);
+        $this->swCoordinates = $swCoordinates ?? new Coordinate(43.35714, -9.22852);
     }
 
     /**
@@ -82,6 +92,22 @@ class MapFilter implements FilterInterface
         return $this->limit;
     }
 
+    /**
+     * @return Coordinate
+     */
+    public function getNeCoordinates(): Coordinate
+    {
+        return $this->neCoordinates;
+    }
+
+    /**
+     * @return Coordinate
+     */
+    public function getSwCoordinates(): Coordinate
+    {
+        return $this->swCoordinates;
+    }
+
     public function buildQueryString(): string
     {
         $queryString[] = $this->isShowPeople() ? 'people=true' : 'people=false';
@@ -90,6 +116,10 @@ class MapFilter implements FilterInterface
         $queryString[] = $this->isShowGroups() ? 'groups=true' : 'groups=false';
         $queryString[] = $this->isShowIdeas() ? 'ideas=true' : 'ideas=false';
         $queryString[] = 'search_result_limit=' . $this->getLimit();
+        $queryString[] = 'ne_lat=' . $this->getNeCoordinates()->getLatitude();
+        $queryString[] = 'ne_lon=' . $this->getNeCoordinates()->getLongitude();
+        $queryString[] = 'sw_lat=' . $this->getSwCoordinates()->getLatitude();
+        $queryString[] = 'sw_lon=' . $this->getSwCoordinates()->getLongitude();
 
         return implode('&', $queryString);
     }
