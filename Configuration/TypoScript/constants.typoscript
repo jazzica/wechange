@@ -9,6 +9,11 @@ plugin.tx_wechange {
     }
 
     settings {
+        map {
+            # cat=plugin.tx_wechange/map; type=string; label=Base URL for the WECHANGE Map
+            baseUrl = https://wechange.de/
+        }
+
         api {
             # cat=plugin.tx_wechange/api; type=string; label=Base URL for the WECHANGE API
             baseUrl = https://wechange.de/api/v2/

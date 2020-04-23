@@ -17,6 +17,11 @@ plugin.tx_wechange {
     }
 
     settings {
+
+        map {
+            baseUrl = {$plugin.tx_wechange.settings.map.baseUrl}
+        }
+
         api {
             baseUrl = {$plugin.tx_wechange.settings.api.baseUrl}
         }

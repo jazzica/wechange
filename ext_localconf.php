@@ -9,5 +9,13 @@ call_user_func(
                 'Project' => 'list'
             ]
         );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'JS.Wechange',
+            'Map',
+            [
+                'Map' => 'show'
+            ]
+        );
     }
 );

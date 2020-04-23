@@ -6,7 +6,7 @@
 				<source>Name</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.projects" xml:space="preserve">
+            <trans-unit id="plugin.projects" xml:space="preserve">
 				<source>WECHANGE: Projects</source>
 			</trans-unit>
             <trans-unit id="plugin.projects.filter.parent" xml:space="preserve">
@@ -29,6 +29,10 @@
 			</trans-unit>
             <trans-unit id="plugin.projects.filter.limit" xml:space="preserve">
 				<source>Limit</source>
+			</trans-unit>
+
+            <trans-unit id="plugin.map" xml:space="preserve">
+				<source>WECHANGE: Map</source>
 			</trans-unit>
         </body>
     </file>
