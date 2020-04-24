@@ -5,18 +5,35 @@
   "authors": [
     {
       "name": "Jessica Schlierenkamp",
-      "role": "Developer"
+      "email": "mail@schlierenkamp.de",
+      "role": "Developer",
+      "homepage": "https://www.schlierenkamp.de/"
     }
   ],
   "license": [
     "GPL-2.0-or-later"
   ],
+  "support": {
+    "issues": "https://github.com/jazzica/wechange/issues"
+  },
   "config": {
     "platform": {
       "php": "7.4"
     },
+    "optimize-autoloader": true,
     "vendor-dir": ".Build/vendor",
     "bin-dir": ".Build/bin"
+  },
+  "require": {
+    "php": ">=7.4.0",
+    "ext-json": "*",
+    "typo3/cms-backend": "^9.5 || ^10.4",
+    "typo3/cms-core": "^9.5 || ^10.4",
+    "typo3/cms-extbase": "^9.5 || ^10.4",
+    "typo3/cms-extensionmanager": "^9.5 || ^10.4",
+    "typo3/cms-fluid": "^9.5 || ^10.4",
+    "typo3/cms-frontend": "^9.5 || ^10.4",
+    "typo3/cms-install": "^9.5 || ^10.4"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
