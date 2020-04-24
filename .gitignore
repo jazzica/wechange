@@ -1,7 +1,23 @@
-.Build/
-.idea/
-Build/testing-docker/.env
+# misc
 composer.lock
 .DS_Store
-/var
 /.php_cs.cache
+
+# ignore generated documentation
+*GENERATED*
+
+# ignore typical clutter of IDEs and editors (this could be added in .git/info/exclude,
+#  but we add it here for convenience)
+*~
+*.bak
+*.idea
+*.project
+*.swp
+.project
+.webprj
+nbproject
+
+# ignore generated dirs and files needed for testing
+.Build/
+Build/testing-docker/.env
+/var
