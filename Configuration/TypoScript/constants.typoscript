@@ -1,21 +1,21 @@
 plugin.tx_wechange {
     view {
-        # cat=plugin.tx_wechange/file; type=string; label=Path to template root (FE)
+        # cat=wechange: templates/file; type=string; label=Path to template root (FE)
         templateRootPath =
-        # cat=plugin.tx_wechange/file; type=string; label=Path to template partials (FE)
+        # cat=wechange: templates/file; type=string; label=Path to template partials (FE)
         partialRootPath =
-        # cat=plugin.tx_wechange/file; type=string; label=Path to template layouts (FE)
+        # cat=wechange: templates/file; type=string; label=Path to template layouts (FE)
         layoutRootPath =
     }
 
     settings {
         map {
-            # cat=plugin.tx_wechange/map; type=string; label=Base URL for the WECHANGE Map
+            # cat=wechange: config/map; type=string; label=Base URL for the WECHANGE Map
             baseUrl = https://wechange.de/
         }
 
         api {
-            # cat=plugin.tx_wechange/api; type=string; label=Base URL for the WECHANGE API
+            # cat=wechange: config/api; type=string; label=Base URL for the WECHANGE API
             baseUrl = https://wechange.de/api/v2/
         }
     }
