@@ -81,6 +81,11 @@ class MapFilterTest extends UnitTestCase
                 'people=true&events=true&projects=true&groups=true&ideas=true&search_result_limit=100'
                 . '&ne_lat=12&ne_lon=34&sw_lat=56&sw_lon=78'
             ],
+            'MapFilter with filter group' => [
+                new MapFilter(true, true, true, true, true, 1000, null, null, 1012),
+                'people=true&events=true&projects=true&groups=true&ideas=true&search_result_limit=1000'
+                . '&ne_lat=56.54737&ne_lon=31.9043&sw_lat=43.35714&sw_lon=-9.22852&filter_group=1012'
+            ],
             'MapFilter with different options set' => [
                 new MapFilter(
                     true,

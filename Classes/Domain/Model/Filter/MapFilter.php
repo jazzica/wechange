@@ -19,6 +19,7 @@ class MapFilter implements FilterInterface
     private bool $showGroups;
     private bool $showIdeas;
     private int $limit;
+    private int $group;
 
     private Coordinate $neCoordinates;
     private Coordinate $swCoordinates;
@@ -31,7 +32,8 @@ class MapFilter implements FilterInterface
         bool $showIdeas = true,
         int $limit = 1000,
         Coordinate $neCoordinates = null,
-        Coordinate $swCoordinates = null
+        Coordinate $swCoordinates = null,
+        int $group = 0
     ) {
         $this->showPeople = $showPeople;
         $this->showEvents = $showEvents;
@@ -42,6 +44,8 @@ class MapFilter implements FilterInterface
 
         $this->neCoordinates = $neCoordinates ?? new Coordinate(56.54737, 31.9043);
         $this->swCoordinates = $swCoordinates ?? new Coordinate(43.35714, -9.22852);
+
+        $this->group = $group;
     }
 
     /**
@@ -108,6 +112,14 @@ class MapFilter implements FilterInterface
         return $this->swCoordinates;
     }
 
+    /**
+     * @return int
+     */
+    public function getGroup(): int
+    {
+        return $this->group;
+    }
+
     public function buildQueryString(): string
     {
         $queryString[] = $this->isShowPeople() ? 'people=true' : 'people=false';
@@ -120,6 +132,10 @@ class MapFilter implements FilterInterface
         $queryString[] = 'ne_lon=' . $this->getNeCoordinates()->getLongitude();
         $queryString[] = 'sw_lat=' . $this->getSwCoordinates()->getLatitude();
         $queryString[] = 'sw_lon=' . $this->getSwCoordinates()->getLongitude();
+
+        if ($group = $this->getGroup()) {
+            $queryString[] = 'filter_group=' . $group;
+        }
 
         return implode('&', $queryString);
     }
