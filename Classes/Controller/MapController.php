@@ -22,7 +22,10 @@ class MapController extends ActionController
             (bool)$this->settings['filter']['showProjects'],
             (bool)$this->settings['filter']['showGroups'],
             (bool)$this->settings['filter']['showIdeas'],
-            (int)$this->settings['filter']['limit']
+            (int)$this->settings['filter']['limit'],
+            null,
+            null,
+            (int)$this->settings['filter']['group']
         );
         $this->view->assign('iframeSource',
             $this->settings['map']['baseUrl'] . 'map/embed/?' . $mapFilter->buildQueryString());

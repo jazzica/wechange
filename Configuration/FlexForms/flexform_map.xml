@@ -97,6 +97,18 @@
                             </config>
                         </TCEforms>
                     </settings.filter.showIdeas>
+                    <settings.filter.group>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.filter.group
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim,int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.group>
                     <settings.filter.limit>
                         <TCEforms>
                             <label>

@@ -49,6 +49,9 @@
 			<trans-unit id="plugin.map.filter.showIdeas" xml:space="preserve">
 				<source>show Ideas</source>
 			</trans-unit>
+			<trans-unit id="plugin.map.filter.group" xml:space="preserve">
+				<source>Group</source>
+			</trans-unit>
 			<trans-unit id="plugin.map.filter.limit" xml:space="preserve">
 				<source>Limit</source>
 			</trans-unit>
