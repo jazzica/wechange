@@ -17,7 +17,7 @@ WECHANGE
    wechange
 
 :Version:
-   latest (1.0.0-dev)
+   latest (1.0.0)
 
 :Language:
    en
