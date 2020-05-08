@@ -25,14 +25,14 @@ class MapFilter implements FilterInterface
     private Coordinate $swCoordinates;
 
     public function __construct(
+        Coordinate $neCoordinates,
+        Coordinate $swCoordinates,
         bool $showPeople = true,
         bool $showEvents = true,
         bool $showProjects = true,
         bool $showGroups = true,
         bool $showIdeas = true,
         int $limit = 1000,
-        Coordinate $neCoordinates = null,
-        Coordinate $swCoordinates = null,
         int $group = 0
     ) {
         $this->showPeople = $showPeople;
@@ -41,10 +41,8 @@ class MapFilter implements FilterInterface
         $this->showGroups = $showGroups;
         $this->showIdeas = $showIdeas;
         $this->limit = $limit;
-
-        $this->neCoordinates = $neCoordinates ?? new Coordinate(56.54737, 31.9043);
-        $this->swCoordinates = $swCoordinates ?? new Coordinate(43.35714, -9.22852);
-
+        $this->neCoordinates = $neCoordinates;
+        $this->swCoordinates = $swCoordinates;
         $this->group = $group;
     }
 

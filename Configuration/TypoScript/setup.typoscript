@@ -17,13 +17,18 @@ plugin.tx_wechange {
     }
 
     settings {
+        api {
+            baseUrl = {$plugin.tx_wechange.settings.api.baseUrl}
+        }
 
         map {
             baseUrl = {$plugin.tx_wechange.settings.map.baseUrl}
-        }
-
-        api {
-            baseUrl = {$plugin.tx_wechange.settings.api.baseUrl}
+            coordinates {
+                ne_lat = {$plugin.tx_wechange.settings.map.coordinates.ne_lat}
+                ne_lon = {$plugin.tx_wechange.settings.map.coordinates.ne_lon}
+                sw_lat = {$plugin.tx_wechange.settings.map.coordinates.sw_lat}
+                sw_lon = {$plugin.tx_wechange.settings.map.coordinates.sw_lon}
+            }
         }
     }
 }

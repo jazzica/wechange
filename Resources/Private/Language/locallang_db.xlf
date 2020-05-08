@@ -6,7 +6,39 @@
 				<source>Name</source>
 			</trans-unit>
 
-            <trans-unit id="plugin.projects" xml:space="preserve">
+			<trans-unit id="typoscript.view.templateRootPath" xml:space="preserve">
+				<source>Path to template root (FE)</source>
+			</trans-unit>
+			<trans-unit id="typoscript.view.partialRootPath" xml:space="preserve">
+				<source>Path to template partials (FE)</source>
+			</trans-unit>
+			<trans-unit id="typoscript.view.layoutRootPath" xml:space="preserve">
+				<source>Path to template layouts (FE)</source>
+			</trans-unit>
+
+			<trans-unit id="typoscript.api" xml:space="preserve">
+				<source>API</source>
+			</trans-unit>
+			<trans-unit id="typoscript.api.baseurl" xml:space="preserve">
+				<source>Base URL for the WECHANGE API</source>
+			</trans-unit>
+			<trans-unit id="typoscript.map.baseurl" xml:space="preserve">
+				<source>Base URL for the WECHANGE Map</source>
+			</trans-unit>
+			<trans-unit id="typoscript.map.ne_lat" xml:space="preserve">
+				<source>Upper right corner (latitude)</source>
+			</trans-unit>
+			<trans-unit id="typoscript.map.ne_lon" xml:space="preserve">
+				<source>Upper right corner (longitude)</source>
+			</trans-unit>
+			<trans-unit id="typoscript.map.sw_lat" xml:space="preserve">
+				<source>Bottom left corner (latitude)</source>
+			</trans-unit>
+			<trans-unit id="typoscript.map.sw_lon" xml:space="preserve">
+				<source>Bottom left corner (longitude)</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.projects" xml:space="preserve">
 				<source>WECHANGE: Projects</source>
 			</trans-unit>
 			<trans-unit id="plugin.projects.description" xml:space="preserve">
