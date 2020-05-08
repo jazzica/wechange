@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-05-08T12:02:10Z">
+        <body>
+            <trans-unit id="project.name" xml:space="preserve">
+				<target>Name</target>
+			</trans-unit>
+
+			<trans-unit id="typoscript.view.templateRootPath" xml:space="preserve">
+				<target>Pfad zum Template Root Verzeichnis (FE)</target>
+			</trans-unit>
+			<trans-unit id="typoscript.view.partialRootPath" xml:space="preserve">
+				<target>Pfad zum Partial Root Verzeichnis (FE)</target>
+			</trans-unit>
+			<trans-unit id="typoscript.view.layoutRootPath" xml:space="preserve">
+				<target>Pfad zum Layout Root Verzeichnis (FE)</target>
+			</trans-unit>
+
+			<trans-unit id="typoscript.api" xml:space="preserve">
+				<target>API</target>
+			</trans-unit>
+			<trans-unit id="typoscript.api.baseurl" xml:space="preserve">
+				<target>Base URL für die WECHANGE API</target>
+			</trans-unit>
+			<trans-unit id="typoscript.map.baseurl" xml:space="preserve">
+				<target>Base URL für die WECHANGE Karte</target>
+			</trans-unit>
+			<trans-unit id="typoscript.map.ne_lat" xml:space="preserve">
+				<target>Obere rechte Ecke (Längengrad)</target>
+			</trans-unit>
+			<trans-unit id="typoscript.map.ne_lon" xml:space="preserve">
+				<target>Obere rechte Ecke (Breitengrad)</target>
+			</trans-unit>
+			<trans-unit id="typoscript.map.sw_lat" xml:space="preserve">
+				<target>Untere linke Ecke (Längengrad)</target>
+			</trans-unit>
+			<trans-unit id="typoscript.map.sw_lon" xml:space="preserve">
+				<target>Untere linke Ecke (Breitengrad)</target>
+			</trans-unit>
+
+			<trans-unit id="plugin.projects" xml:space="preserve">
+				<target>WECHANGE: Projekte</target>
+			</trans-unit>
+			<trans-unit id="plugin.projects.description" xml:space="preserve">
+				<target>Zeigt eine WECHANGE Projektliste. Mögliche Filter für Gruppen, Tags etc.</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.parent" xml:space="preserve">
+				<target>Gruppen ID</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.tag" xml:space="preserve">
+				<target>Tag</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderBy" xml:space="preserve">
+				<target>Sortieren nach</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderDir" xml:space="preserve">
+				<target>Sortierrichung</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderDir.asc" xml:space="preserve">
+				<target>aufsteigend</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.orderDir.desc" xml:space="preserve">
+				<target>absteigent</target>
+			</trans-unit>
+            <trans-unit id="plugin.projects.filter.limit" xml:space="preserve">
+				<target>max. Anzahl an Ergebnissen</target>
+			</trans-unit>
+
+            <trans-unit id="plugin.map" xml:space="preserve">
+				<target>WECHANGE: Karte</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.description" xml:space="preserve">
+				<target>Bettet die WECHANGE Karte als iFrame ein. Mögliche Filter: zeige Personen, Veranstaltungen, Projekte etc.</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.showPeople" xml:space="preserve">
+				<target>zeige Personen</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.showEvents" xml:space="preserve">
+				<target>zeige Veranstaltungen</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.showProjects" xml:space="preserve">
+				<target>zeige Projekte</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.showGroups" xml:space="preserve">
+				<target>zeige Gruppen</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.showIdeas" xml:space="preserve">
+				<target>zeige Ideen</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.group" xml:space="preserve">
+				<target>Gruppe</target>
+			</trans-unit>
+            <trans-unit id="plugin.map.filter.limit" xml:space="preserve">
+				<target>max. Anzahl an Ergebnissen</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
