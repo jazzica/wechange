@@ -1,0 +1,34 @@
+plugin.tx_wechange {
+    view {
+        templateRootPaths {
+            0 = EXT:wechange/Resources/Private/Templates/
+            1 = {$plugin.tx_wechange.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:wechange/Resources/Private/Partials/
+            1 = {$plugin.tx_wechange.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:wechange/Resources/Private/Layouts/
+            1 = {$plugin.tx_wechange.view.layoutRootPath}
+        }
+    }
+
+    settings {
+        api {
+            baseUrl = {$plugin.tx_wechange.settings.api.baseUrl}
+        }
+
+        map {
+            baseUrl = {$plugin.tx_wechange.settings.map.baseUrl}
+            coordinates {
+                neLat = {$plugin.tx_wechange.settings.map.coordinates.neLat}
+                neLon = {$plugin.tx_wechange.settings.map.coordinates.neLon}
+                swLat = {$plugin.tx_wechange.settings.map.coordinates.swLat}
+                swLon = {$plugin.tx_wechange.settings.map.coordinates.swLon}
+            }
+        }
+    }
+}

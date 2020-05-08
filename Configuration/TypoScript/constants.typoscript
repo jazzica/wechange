@@ -1,0 +1,34 @@
+# customsubcategory=api=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.api
+# customsubcategory=map=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map
+plugin.tx_wechange {
+    view {
+        # cat=wechange: templates/file; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.view.templateRootPath
+        templateRootPath =
+        # cat=wechange: templates/file; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.view.partialRootPath
+        partialRootPath =
+        # cat=wechange: templates/file; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.view.layoutRootPath
+        layoutRootPath =
+    }
+
+    settings {
+        api {
+            # cat=wechange: config/api; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.api.baseurl
+            baseUrl = https://wechange.de/api/v2/
+        }
+
+        map {
+            # cat=wechange: config/map; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.baseurl
+            baseUrl = https://wechange.de/
+            coordinates {
+                # cat=wechange: config/map/coordinates/1; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.ne_lat
+                neLat = 50.66519
+                # cat=wechange: config/map/coordinates/2; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.ne_lon
+                neLon = 21.70898
+                # cat=wechange: config/map/coordinates/3; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.sw_lat
+                swLat = 50.47554
+                # cat=wechange: config/map/coordinates/4; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.sw_lon
+                swLon = -2.19727
+            }
+        }
+    }
+}

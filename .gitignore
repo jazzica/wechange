@@ -1,23 +1,23 @@
-## TYPO3 v6.2
-# Ignore several upload and file directories.
-/fileadmin/user_upload/
-/fileadmin/_temp_/
-/fileadmin/_processed_/
-/uploads/
-# Ignore cache
-/typo3conf/temp_CACHED*
-/typo3conf/temp_fieldInfo.php
-/typo3conf/deprecation_*.log
-/typo3conf/ENABLE_INSTALL_TOOL
-/typo3conf/realurl_autoconf.php
-/FIRST_INSTALL
-# Ignore system folders, you should have them symlinked.
-# If not comment out the following entries.
-/typo3
-/typo3_src
-/typo3_src-*
-/Packages
-/.htaccess
-/index.php
-# Ignore temp directory.
-/typo3temp/
+# misc
+composer.lock
+.DS_Store
+/.php_cs.cache
+
+# ignore generated documentation
+*GENERATED*
+
+# ignore typical clutter of IDEs and editors (this could be added in .git/info/exclude,
+#  but we add it here for convenience)
+*~
+*.bak
+*.idea
+*.project
+*.swp
+.project
+.webprj
+nbproject
+
+# ignore generated dirs and files needed for testing
+.Build/
+Build/testing-docker/.env
+/var
