@@ -19,12 +19,12 @@ class MapController extends ActionController
     {
         $mapFilter = new MapFilter(
             new Coordinate(
-                (float)$this->settings['map']['coordinates']['ne_lat'],
-                (float)$this->settings['map']['coordinates']['ne_lon']
+                (float)$this->settings['map']['coordinates']['neLat'],
+                (float)$this->settings['map']['coordinates']['neLon']
             ),
             new Coordinate(
-                (float)$this->settings['map']['coordinates']['sw_lat'],
-                (float)$this->settings['map']['coordinates']['sw_lon']
+                (float)$this->settings['map']['coordinates']['swLat'],
+                (float)$this->settings['map']['coordinates']['swLon']
             ),
             (bool)$this->settings['filter']['showPeople'], (bool)$this->settings['filter']['showEvents'],
             (bool)$this->settings['filter']['showProjects'], (bool)$this->settings['filter']['showGroups'],

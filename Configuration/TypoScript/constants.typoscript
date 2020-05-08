@@ -21,13 +21,13 @@ plugin.tx_wechange {
             baseUrl = https://wechange.de/
             coordinates {
                 # cat=wechange: config/map/coordinates/1; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.ne_lat
-                ne_lat = 50.66519
+                neLat = 50.66519
                 # cat=wechange: config/map/coordinates/2; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.ne_lon
-                ne_lon = 21.70898
+                neLon = 21.70898
                 # cat=wechange: config/map/coordinates/3; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.sw_lat
-                sw_lat = 50.47554
+                swLat = 50.47554
                 # cat=wechange: config/map/coordinates/4; type=string; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.map.sw_lon
-                sw_lon = -2.19727
+                swLon = -2.19727
             }
         }
     }

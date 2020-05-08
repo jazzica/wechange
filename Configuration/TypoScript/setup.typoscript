@@ -24,10 +24,10 @@ plugin.tx_wechange {
         map {
             baseUrl = {$plugin.tx_wechange.settings.map.baseUrl}
             coordinates {
-                ne_lat = {$plugin.tx_wechange.settings.map.coordinates.ne_lat}
-                ne_lon = {$plugin.tx_wechange.settings.map.coordinates.ne_lon}
-                sw_lat = {$plugin.tx_wechange.settings.map.coordinates.sw_lat}
-                sw_lon = {$plugin.tx_wechange.settings.map.coordinates.sw_lon}
+                neLat = {$plugin.tx_wechange.settings.map.coordinates.neLat}
+                neLon = {$plugin.tx_wechange.settings.map.coordinates.neLon}
+                swLat = {$plugin.tx_wechange.settings.map.coordinates.swLat}
+                swLon = {$plugin.tx_wechange.settings.map.coordinates.swLon}
             }
         }
     }
