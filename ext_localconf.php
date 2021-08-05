@@ -58,5 +58,10 @@ call_user_func(
                 ['source' => 'EXT:wechange/Resources/Public/Icons/wechange.png']
             );
         }
+
+        if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['jswechange_projectList']) ||
+            !is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['jswechange_projectList'])) {
+            $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['jswechange_projectList'] = [];
+        }
     }
 );

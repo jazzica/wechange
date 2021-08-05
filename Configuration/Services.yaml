@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  JS\Wechange\:
+    resource: '../Classes/*'
+
+  JS\Wechange\Controller\ProjectController:
+    arguments:
+      $cache: '@cache.projectList'
+
+  cache.projectList:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: [ '@TYPO3\CMS\Core\Cache\CacheManager', 'getCache' ]
+    arguments: [ 'jswechange_projectList' ]

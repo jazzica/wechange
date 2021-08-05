@@ -37,6 +37,12 @@
 			<trans-unit id="typoscript.map.sw_lon" xml:space="preserve">
 				<source>Bottom left corner (longitude)</source>
 			</trans-unit>
+			<trans-unit id="typoscript.cache" xml:space="preserve">
+				<source>Cache</source>
+			</trans-unit>
+			<trans-unit id="typoscript.cache.lifetime" xml:space="preserve">
+				<source>Cache Lifetime (sec.)</source>
+			</trans-unit>
 
 			<trans-unit id="plugin.projects" xml:space="preserve">
 				<source>WECHANGE: Projects</source>
