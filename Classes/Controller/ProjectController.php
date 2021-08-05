@@ -12,10 +12,19 @@ namespace JS\Wechange\Controller;
 use JS\Wechange\Domain\Model\Filter\ProjectFilter;
 use JS\Wechange\Domain\Repository\ProjectRepository;
 use JS\Wechange\Service\ApiService;
+use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ProjectController extends ActionController
 {
+
+    private FrontendInterface $cache;
+
+    public function __construct(FrontendInterface $cache)
+    {
+        $this->cache = $cache;
+    }
+
     /**
      * @var ProjectRepository
      */
@@ -26,20 +35,40 @@ class ProjectController extends ActionController
         $this->projectRepository = new ProjectRepository($this->settings['api']['baseUrl'], new ApiService());
     }
 
-    public function listAction(): void
+    public function listAction(): string
     {
-        $projectFilter = new ProjectFilter(
-            (int)$this->settings['filter']['parent'],
-            $this->settings['filter']['tag'],
-            (int)$this->settings['filter']['limit'],
-            $this->settings['filter']['orderBy'],
-            $this->settings['filter']['orderDir']
-        );
+        $cacheIdentifier = $this->calculateCacheIdentifier();
 
-        try {
-            $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));
-        } catch (\JsonException $e) {
-            $this->view->assign('projects', []);
+        if ($cacheIdentifier === null || ($content = $this->cache->get($cacheIdentifier)) === false) {
+            $projectFilter = new ProjectFilter(
+                (int)$this->settings['filter']['parent'],
+                $this->settings['filter']['tag'],
+                (int)$this->settings['filter']['limit'],
+                $this->settings['filter']['orderBy'],
+                $this->settings['filter']['orderDir']
+            );
+
+            try {
+                $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));
+            } catch (\JsonException $e) {
+                $this->view->assign('projects', []);
+            }
+
+            $content = $this->view->render();
+            $this->cache->set($cacheIdentifier, $content, [], $this->settings['cache']['lifetime']);
         }
+
+        return $content;
+    }
+
+    private function calculateCacheIdentifier(): ?string
+    {
+        $contentObj = $this->configurationManager->getContentObject();
+
+        if (!$contentObj) {
+            return null;
+        }
+
+        return 'projectList_' . $contentObj->data['uid'];
     }
 }
