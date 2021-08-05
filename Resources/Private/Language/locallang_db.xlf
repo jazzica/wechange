@@ -22,6 +22,9 @@
 			<trans-unit id="typoscript.api.baseurl" xml:space="preserve">
 				<source>Base URL for the WECHANGE API</source>
 			</trans-unit>
+			<trans-unit id="typoscript.map" xml:space="preserve">
+				<source>Map</source>
+			</trans-unit>
 			<trans-unit id="typoscript.map.baseurl" xml:space="preserve">
 				<source>Base URL for the WECHANGE Map</source>
 			</trans-unit>
