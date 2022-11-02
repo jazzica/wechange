@@ -5,7 +5,7 @@
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace JS\Wechange\Controller;
 

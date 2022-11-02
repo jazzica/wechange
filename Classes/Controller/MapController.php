@@ -5,7 +5,7 @@
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace JS\Wechange\Controller;
 
@@ -26,12 +26,17 @@ class MapController extends ActionController
                 (float)$this->settings['map']['coordinates']['swLat'],
                 (float)$this->settings['map']['coordinates']['swLon']
             ),
-            (bool)$this->settings['filter']['showPeople'], (bool)$this->settings['filter']['showEvents'],
-            (bool)$this->settings['filter']['showProjects'], (bool)$this->settings['filter']['showGroups'],
-            (bool)$this->settings['filter']['showIdeas'], (int)$this->settings['filter']['limit'],
+            (bool)$this->settings['filter']['showPeople'],
+            (bool)$this->settings['filter']['showEvents'],
+            (bool)$this->settings['filter']['showProjects'],
+            (bool)$this->settings['filter']['showGroups'],
+            (bool)$this->settings['filter']['showIdeas'],
+            (int)$this->settings['filter']['limit'],
             (int)$this->settings['filter']['group']
         );
-        $this->view->assign('iframeSource',
-            $this->settings['map']['baseUrl'] . 'map/embed/?' . $mapFilter->buildQueryString());
+        $this->view->assign(
+            'iframeSource',
+            $this->settings['map']['baseUrl'] . 'map/embed/?' . $mapFilter->buildQueryString()
+        );
     }
 }

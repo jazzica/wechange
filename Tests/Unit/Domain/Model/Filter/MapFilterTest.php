@@ -5,7 +5,7 @@
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace JS\Wechange\Tests\Unit\Domain\Model\Filter;
 
@@ -16,15 +16,12 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class MapFilterTest extends UnitTestCase
 {
     /**
-     * @test
-     *
      * @dataProvider buildQueryStringDataProvider
-     * @covers       \JS\Wechange\Domain\Model\Filter\ProjectFilter::buildQueryString
      *
      * @param MapFilter $mapFilter
      * @param string $expected
      */
-    public function buildQueryString(MapFilter $mapFilter, string $expected): void
+    public function testBuildQueryString(MapFilter $mapFilter, string $expected): void
     {
         self::assertEquals($expected, $mapFilter->buildQueryString());
     }

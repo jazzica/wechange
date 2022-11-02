@@ -20,6 +20,9 @@ class ProjectFilter implements FilterInterface
     private string $orderBy;
     private string $orderDir;
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function __construct(
         int $parent = 0,
         string $tag = '',

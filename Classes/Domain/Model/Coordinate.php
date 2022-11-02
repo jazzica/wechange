@@ -9,6 +9,9 @@ declare(strict_types = 1);
 
 namespace JS\Wechange\Domain\Model;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Coordinate
 {
     private float $latitude;
