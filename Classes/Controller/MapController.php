@@ -10,30 +10,29 @@ declare(strict_types=1);
 namespace JS\Wechange\Controller;
 
 use JS\Wechange\Domain\Model\Coordinate;
+use JS\Wechange\Domain\Model\Filter\FilterFactory;
 use JS\Wechange\Domain\Model\Filter\MapFilter;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class MapController extends ActionController
 {
+    protected FilterFactory $filterFactory;
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function __construct(FilterFactory $filterFactory)
+    {
+        $this->filterFactory = $filterFactory;
+    }
+
     public function showAction(): void
     {
-        $mapFilter = new MapFilter(
-            new Coordinate(
-                (float)$this->settings['map']['coordinates']['neLat'],
-                (float)$this->settings['map']['coordinates']['neLon']
-            ),
-            new Coordinate(
-                (float)$this->settings['map']['coordinates']['swLat'],
-                (float)$this->settings['map']['coordinates']['swLon']
-            ),
-            (bool)$this->settings['filter']['showPeople'],
-            (bool)$this->settings['filter']['showEvents'],
-            (bool)$this->settings['filter']['showProjects'],
-            (bool)$this->settings['filter']['showGroups'],
-            (bool)$this->settings['filter']['showIdeas'],
-            (int)$this->settings['filter']['limit'],
-            (int)$this->settings['filter']['group']
+        $mapFilter = $this->filterFactory->makeMapFilter(
+            $this->settings['map']['coordinates'],
+            $this->settings['filter']
         );
+
         $this->view->assign(
             'iframeSource',
             $this->settings['map']['baseUrl'] . 'map/embed/?' . $mapFilter->buildQueryString()
