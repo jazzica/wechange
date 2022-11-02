@@ -20,9 +20,7 @@
     "platform": {
       "php": "7.4"
     },
-    "optimize-autoloader": true,
-    "vendor-dir": ".Build/vendor",
-    "bin-dir": ".Build/bin"
+    "optimize-autoloader": true
   },
   "require": {
     "php": ">=7.4.0",
@@ -34,11 +32,6 @@
     "typo3/cms-fluid": "^9.5 || ^10.4",
     "typo3/cms-frontend": "^9.5 || ^10.4",
     "typo3/cms-install": "^9.5 || ^10.4"
-  },
-  "require-dev": {
-    "roave/security-advisories": "dev-master",
-    "typo3/testing-framework": "^4",
-    "friendsofphp/php-cs-fixer": "^2.16"
   },
   "autoload": {
     "psr-4": {
@@ -54,15 +47,8 @@
     "jazzica/wechange": "self.version",
     "typo3-ter/wechange": "self.version"
   },
-  "scripts": {
-    "post-autoload-dump": [
-      "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
-    ]
-  },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": ".Build/Web",
       "extension-key": "wechange"
     }
   }
