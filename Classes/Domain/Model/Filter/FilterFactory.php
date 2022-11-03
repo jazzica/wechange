@@ -6,6 +6,9 @@ namespace JS\Wechange\Domain\Model\Filter;
 
 use JS\Wechange\Domain\Model\Coordinate;
 
+/**
+ * @codeCoverageIgnore
+ */
 class FilterFactory
 {
     public function makeMapFilter(array $coordinates, array $filterSettings): MapFilter

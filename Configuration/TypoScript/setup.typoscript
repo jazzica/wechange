@@ -17,10 +17,6 @@ plugin.tx_wechange {
     }
 
     settings {
-        api {
-            baseUrl = {$plugin.tx_wechange.settings.api.baseUrl}
-        }
-
         map {
             baseUrl = {$plugin.tx_wechange.settings.map.baseUrl}
             coordinates {

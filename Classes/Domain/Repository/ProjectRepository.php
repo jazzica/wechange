@@ -5,57 +5,38 @@
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace JS\Wechange\Domain\Repository;
 
 use JS\Wechange\Domain\Model\Filter\ProjectFilter;
-use JS\Wechange\Service\ApiService;
+use JS\Wechange\Service\ApiQueryService;
 
+/**
+ * @codeCoverageIgnore
+ */
 class ProjectRepository
 {
     private const API_SLUG = 'projects/';
+    private ApiQueryService $apiQueryService;
 
-    /**
-     * @var ApiService
-     */
-    private ApiService $apiService;
-
-    private string $apiBaseUrl;
-
-    /**
-     * @param string $apiBaseUrl
-     * @param ApiService $apiService
-     */
-    public function __construct(string $apiBaseUrl, ApiService $apiService)
+    public function __construct(ApiQueryService $apiQueryService)
     {
-        $this->apiBaseUrl = $apiBaseUrl;
-        $this->apiService = $apiService;
+        $this->apiQueryService = $apiQueryService;
     }
 
     /**
-     * @param ProjectFilter $projectFilter
-     *
-     * @return array
      * @throws \JsonException
      */
     public function findForFilter(ProjectFilter $projectFilter): array
     {
-        $projects = $this->apiService->makeRequest(
-            $this->apiBaseUrl . self::API_SLUG . '?' . $projectFilter->buildQueryString()
-        );
+        $projects = $this->apiQueryService->makeRequest(self::API_SLUG . '?' . $projectFilter->buildQueryString());
         $this->sort($projects, $projectFilter);
 
         return $projects;
     }
 
-    /**
-     * @param array $projects
-     * @param ProjectFilter $projectFilter
-     *
-     * @return void
-     */
-    private function sort(array &$projects, ProjectFilter $projectFilter): void
+    protected function sort(array &$projects, ProjectFilter $projectFilter): void
     {
         if ($orderBy = $projectFilter->getOrderBy()) {
             usort($projects, static function ($item1, $item2) use ($orderBy) {

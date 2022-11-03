@@ -11,39 +11,44 @@ namespace JS\Wechange\Controller;
 
 use JS\Wechange\Domain\Model\Filter\FilterFactory;
 use JS\Wechange\Domain\Repository\ProjectRepository;
-use JS\Wechange\Service\ApiService;
+use JS\Wechange\Service\CachingService;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ProjectController extends ActionController
 {
+    protected FrontendInterface $cache;
+    protected FilterFactory $filterFactory;
+    protected ProjectRepository $projectRepository;
+    protected CachingService $cachingService;
 
-    private FrontendInterface $cache;
-    private FilterFactory $filterFactory;
-
-    public function __construct(FrontendInterface $cache, FilterFactory $filterFactory)
-    {
+    /**
+     * @codeCoverageIgnore
+     */
+    public function __construct(
+        FrontendInterface $cache,
+        FilterFactory $filterFactory,
+        ProjectRepository $projectRepository,
+        CachingService $cachingService
+    ) {
         $this->cache = $cache;
         $this->filterFactory = $filterFactory;
-    }
-
-    private ProjectRepository $projectRepository;
-
-    public function initializeAction(): void
-    {
-        $this->projectRepository = new ProjectRepository($this->settings['api']['baseUrl'], new ApiService());
+        $this->projectRepository = $projectRepository;
+        $this->cachingService = $cachingService;
     }
 
     public function listAction(): string
     {
-        $cacheIdentifier = $this->calculateCacheIdentifier();
+        $cacheIdentifier = $this->cachingService->calculateCacheIdentifier(
+            $this->configurationManager->getContentObject(),
+            'projectList_'
+        );
 
-        if ($cacheIdentifier === null || ($content = $this->cache->get($cacheIdentifier)) === false) {
-            $projectFilter = $this->filterFactory->makeProjectFilter($this->settings['filter']);
-
+        if ($cacheIdentifier === '' || ($content = $this->cache->get($cacheIdentifier) === false)) {
             try {
+                $projectFilter = $this->filterFactory->makeProjectFilter($this->settings['filter']);
                 $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));
-            } catch (\JsonException $e) {
+            } catch (\Throwable $exception) {
                 $this->view->assign('projects', []);
             }
 
@@ -51,17 +56,6 @@ class ProjectController extends ActionController
             $this->cache->set($cacheIdentifier, $content, [], $this->settings['cache']['lifetime']);
         }
 
-        return $content;
-    }
-
-    private function calculateCacheIdentifier(): ?string
-    {
-        $contentObj = $this->configurationManager->getContentObject();
-
-        if (!$contentObj) {
-            return null;
-        }
-
-        return 'projectList_' . $contentObj->data['uid'];
+        return $content ?: '';
     }
 }
