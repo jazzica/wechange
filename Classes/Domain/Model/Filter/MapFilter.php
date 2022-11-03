@@ -24,6 +24,9 @@ class MapFilter implements FilterInterface
     private Coordinate $neCoordinates;
     private Coordinate $swCoordinates;
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function __construct(
         Coordinate $neCoordinates,
         Coordinate $swCoordinates,

@@ -22,6 +22,9 @@
 			<trans-unit id="typoscript.api.baseurl" xml:space="preserve">
 				<source>Base URL for the WECHANGE API</source>
 			</trans-unit>
+			<trans-unit id="typoscript.map" xml:space="preserve">
+				<source>Map</source>
+			</trans-unit>
 			<trans-unit id="typoscript.map.baseurl" xml:space="preserve">
 				<source>Base URL for the WECHANGE Map</source>
 			</trans-unit>
@@ -36,6 +39,12 @@
 			</trans-unit>
 			<trans-unit id="typoscript.map.sw_lon" xml:space="preserve">
 				<source>Bottom left corner (longitude)</source>
+			</trans-unit>
+			<trans-unit id="typoscript.cache" xml:space="preserve">
+				<source>Cache</source>
+			</trans-unit>
+			<trans-unit id="typoscript.cache.lifetime" xml:space="preserve">
+				<source>Cache Lifetime (sec.)</source>
 			</trans-unit>
 
 			<trans-unit id="plugin.projects" xml:space="preserve">
