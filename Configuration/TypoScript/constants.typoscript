@@ -30,6 +30,8 @@ plugin.tx_wechange {
         cache {
             # cat=wechange: config/cache/1; type=int+; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.cache.lifetime
             lifetime = 86400
+            # cat=wechange: config/cache/2; type=boolean; label=LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:typoscript.cache.inactive
+            inactive = 0
         }
     }
 }

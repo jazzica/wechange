@@ -39,12 +39,13 @@ class ProjectController extends ActionController
 
     public function listAction(): string
     {
+        $cacheIsInactive = (int)$this->settings['cache']['inactive'];
         $cacheIdentifier = $this->cachingService->calculateCacheIdentifier(
             $this->configurationManager->getContentObject(),
             'projectList_'
         );
 
-        if ($cacheIdentifier === '' || ($content = $this->cache->get($cacheIdentifier) === false)) {
+        if ($cacheIsInactive || $cacheIdentifier === '' || ($content = $this->cache->get($cacheIdentifier)) === false) {
             try {
                 $projectFilter = $this->filterFactory->makeProjectFilter($this->settings['filter']);
                 $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));
@@ -53,7 +54,10 @@ class ProjectController extends ActionController
             }
 
             $content = $this->view->render();
-            $this->cache->set($cacheIdentifier, $content, [], $this->settings['cache']['lifetime']);
+
+            if (!$cacheIsInactive) {
+                $this->cache->set($cacheIdentifier, $content, [], $this->settings['cache']['lifetime']);
+            }
         }
 
         return $content ?: '';

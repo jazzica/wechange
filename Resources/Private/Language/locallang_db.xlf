@@ -46,6 +46,9 @@
 			<trans-unit id="typoscript.cache.lifetime" xml:space="preserve">
 				<source>Cache Lifetime (sec.)</source>
 			</trans-unit>
+			<trans-unit id="typoscript.cache.inactive" xml:space="preserve">
+				<source>Deactivate cache for API requests</source>
+			</trans-unit>
 
 			<trans-unit id="plugin.projects" xml:space="preserve">
 				<source>WECHANGE: Projects</source>

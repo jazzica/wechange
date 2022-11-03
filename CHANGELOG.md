@@ -14,6 +14,7 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added
 
 - missing unit tests
+- possibility to deactivate api request caching
 
 ## [1.1.0](https://github.com/jazzica/wechange/compare/1.0.1...1.1.0) - 2022-11-03
 

@@ -29,6 +29,7 @@ plugin.tx_wechange {
 
         cache {
             lifetime = {$plugin.tx_wechange.settings.cache.lifetime}
+            inactive = {$plugin.tx_wechange.settings.cache.inactive}
         }
     }
 }
