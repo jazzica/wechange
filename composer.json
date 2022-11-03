@@ -1,54 +1,55 @@
 {
-  "name": "jazzica/wechange",
-  "type": "typo3-cms-extension",
-  "description": "TYPO3 integration for the WECHANGE platform (https://wechange.de/)",
-  "authors": [
-    {
-      "name": "Jessica Schlierenkamp",
-      "email": "mail@schlierenkamp.de",
-      "role": "Developer",
-      "homepage": "https://www.schlierenkamp.de/"
-    }
-  ],
-  "license": [
-    "GPL-2.0-or-later"
-  ],
-  "support": {
-    "issues": "https://github.com/jazzica/wechange/issues"
-  },
-  "config": {
-    "platform": {
-      "php": "7.4"
+    "name": "jazzica/wechange",
+    "type": "typo3-cms-extension",
+    "version": "1.1.0",
+    "description": "TYPO3 integration for the WECHANGE platform (https://wechange.de/)",
+    "authors": [
+        {
+            "name": "Jessica Schlierenkamp",
+            "email": "mail@schlierenkamp.de",
+            "role": "Developer",
+            "homepage": "https://www.schlierenkamp.de/"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "support": {
+        "issues": "https://github.com/jazzica/wechange/issues"
     },
-    "optimize-autoloader": true
-  },
-  "require": {
-    "php": ">=7.4.0",
-    "ext-json": "*",
-    "typo3/cms-backend": "^9.5 || ^10.4",
-    "typo3/cms-core": "^9.5 || ^10.4",
-    "typo3/cms-extbase": "^9.5 || ^10.4",
-    "typo3/cms-extensionmanager": "^9.5 || ^10.4",
-    "typo3/cms-fluid": "^9.5 || ^10.4",
-    "typo3/cms-frontend": "^9.5 || ^10.4",
-    "typo3/cms-install": "^9.5 || ^10.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "JS\\Wechange\\": "Classes"
+    "config": {
+        "platform": {
+            "php": "7.4"
+        },
+        "optimize-autoloader": true
+    },
+    "require": {
+        "php": ">=7.4.0",
+        "ext-json": "*",
+        "typo3/cms-backend": "^9.5 || ^10.4",
+        "typo3/cms-core": "^9.5 || ^10.4",
+        "typo3/cms-extbase": "^9.5 || ^10.4",
+        "typo3/cms-extensionmanager": "^9.5 || ^10.4",
+        "typo3/cms-fluid": "^9.5 || ^10.4",
+        "typo3/cms-frontend": "^9.5 || ^10.4",
+        "typo3/cms-install": "^9.5 || ^10.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "JS\\Wechange\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JS\\Wechange\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "typo3-ter/wechange": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "wechange"
+        }
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "JS\\Wechange\\Tests\\": "Tests"
-    }
-  },
-  "replace": {
-    "typo3-ter/wechange": "self.version"
-  },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "wechange"
-    }
-  }
 }
