@@ -4,7 +4,8 @@
  *
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace JS\Wechange\Tests\Unit\Service;
 
@@ -14,12 +15,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 class ApiServiceTest extends UnitTestCase
 {
-    /**
-     * @test
-     *
-     * @covers \JS\Wechange\Service\ApiService::makeRequest
-     */
-    public function makeRequestThrowsException(): void
+    public function testMakeRequestThrowsException(): void
     {
         $this->expectException(RequestFailedException::class);
 
@@ -27,12 +23,7 @@ class ApiServiceTest extends UnitTestCase
         $apiService->makeRequest('does_not_matter');
     }
 
-    /**
-     * @test
-     *
-     * @covers \JS\Wechange\Service\ApiService::makeRequest
-     */
-    public function makeRequest(): void
+    public function testMakeRequest(): void
     {
         $apiService = new ApiService();
 

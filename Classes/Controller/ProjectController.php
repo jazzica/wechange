@@ -5,11 +5,11 @@
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace JS\Wechange\Controller;
 
-use JS\Wechange\Domain\Model\Filter\ProjectFilter;
+use JS\Wechange\Domain\Model\Filter\FilterFactory;
 use JS\Wechange\Domain\Repository\ProjectRepository;
 use JS\Wechange\Service\ApiService;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
@@ -19,15 +19,14 @@ class ProjectController extends ActionController
 {
 
     private FrontendInterface $cache;
+    private FilterFactory $filterFactory;
 
-    public function __construct(FrontendInterface $cache)
+    public function __construct(FrontendInterface $cache, FilterFactory $filterFactory)
     {
         $this->cache = $cache;
+        $this->filterFactory = $filterFactory;
     }
 
-    /**
-     * @var ProjectRepository
-     */
     private ProjectRepository $projectRepository;
 
     public function initializeAction(): void
@@ -40,13 +39,7 @@ class ProjectController extends ActionController
         $cacheIdentifier = $this->calculateCacheIdentifier();
 
         if ($cacheIdentifier === null || ($content = $this->cache->get($cacheIdentifier)) === false) {
-            $projectFilter = new ProjectFilter(
-                (int)$this->settings['filter']['parent'],
-                $this->settings['filter']['tag'],
-                (int)$this->settings['filter']['limit'],
-                $this->settings['filter']['orderBy'],
-                $this->settings['filter']['orderDir']
-            );
+            $projectFilter = $this->filterFactory->makeProjectFilter($this->settings['filter']);
 
             try {
                 $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));

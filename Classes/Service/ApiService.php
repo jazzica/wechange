@@ -5,12 +5,11 @@
  * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace JS\Wechange\Service;
 
 use JS\Wechange\Exception\Api\RequestFailedException;
-use JS\Wechange\Exception\Api\JsonDecodeException;
 
 class ApiService
 {
@@ -29,21 +28,23 @@ class ApiService
         $cURLHTTPCode = curl_getinfo($cURLHandle, CURLINFO_HTTP_CODE);
         curl_close($cURLHandle);
 
-        if ($cURLHTTPCode === 200) {
-            $cURLResult = json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR);
-
-            $elements = [];
-            foreach ($cURLResult->results as $cURLResult) {
-                $elements[] = $cURLResult;
-            }
-
-            return $elements;
+        if ($cURLHTTPCode !== 200) {
+            throw new RequestFailedException(
+                sprintf(
+                    'The cURL request to the following URL failed: \'%s\' with status: %s',
+                    $requestUrl,
+                    $cURLHTTPCode
+                )
+            );
         }
 
-        throw new RequestFailedException(sprintf(
-            'The cURL request to the following URL failed: \'%s\' with status: %s',
-            $requestUrl,
-            $cURLHTTPCode
-        ));
+        $cURLResult = json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR);
+
+        $elements = [];
+        foreach ($cURLResult->results as $cURLResult) {
+            $elements[] = $cURLResult;
+        }
+
+        return $elements;
     }
 }

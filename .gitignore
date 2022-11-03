@@ -16,8 +16,3 @@ composer.lock
 .project
 .webprj
 nbproject
-
-# ignore generated dirs and files needed for testing
-.Build/
-Build/testing-docker/.env
-/var
