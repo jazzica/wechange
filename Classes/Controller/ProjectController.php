@@ -12,11 +12,15 @@ namespace JS\Wechange\Controller;
 use JS\Wechange\Domain\Model\Filter\FilterFactory;
 use JS\Wechange\Domain\Repository\ProjectRepository;
 use JS\Wechange\Service\CachingService;
+use Psr\Log\LoggerAwareInterface;
+use Psr\Log\LoggerAwareTrait;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
-class ProjectController extends ActionController
+class ProjectController extends ActionController implements LoggerAwareInterface
 {
+    use LoggerAwareTrait;
+
     protected FrontendInterface $cache;
     protected FilterFactory $filterFactory;
     protected ProjectRepository $projectRepository;
@@ -50,6 +54,7 @@ class ProjectController extends ActionController
                 $projectFilter = $this->filterFactory->makeProjectFilter($this->settings['filter']);
                 $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));
             } catch (\Throwable $exception) {
+                $this->logger->error($exception->getMessage());
                 $this->view->assign('projects', []);
             }
 
