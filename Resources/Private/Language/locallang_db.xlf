@@ -50,6 +50,10 @@
 				<source>Deactivate cache for API requests</source>
 			</trans-unit>
 
+			<trans-unit id="plugin.wizard.tab.header" xml:space="preserve">
+				<source>WECHANGE</source>
+			</trans-unit>
+
 			<trans-unit id="plugin.projects" xml:space="preserve">
 				<source>WECHANGE: Projects</source>
 			</trans-unit>

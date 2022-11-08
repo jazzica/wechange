@@ -1,0 +1,28 @@
+mod.wizards {
+    newContentElement.wizardItems {
+        wechange.header = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.wizard.tab.header
+        wechange {
+            elements {
+                projects {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_projects
+                    }
+                }
+                map {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_map
+                    }
+                }
+            }
+            show = *
+        }
+    }
+}

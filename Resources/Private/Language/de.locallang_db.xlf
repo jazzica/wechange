@@ -50,6 +50,10 @@
 				<target>Cache für API Anfragen deaktivieren</target>
 			</trans-unit>
 
+			<trans-unit id="plugin.wizard.tab.header" xml:space="preserve">
+				<target>WECHANGE</target>
+			</trans-unit>
+
 			<trans-unit id="plugin.projects" xml:space="preserve">
 				<target>WECHANGE: Projekte</target>
 			</trans-unit>
