@@ -1,20 +1,21 @@
 <?php
+
 defined('TYPO3_MODE') || die();
 call_user_func(
     static function () {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'JS.Wechange',
+            'Wechange',
             'Projects',
             [
-                'Project' => 'list'
+                \JS\Wechange\Controller\ProjectController::class => 'list'
             ]
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'JS.Wechange',
+            'Wechange',
             'Map',
             [
-                'Map' => 'show'
+                \JS\Wechange\Controller\MapController::class => 'show'
             ]
         );
 
@@ -59,9 +60,6 @@ call_user_func(
             );
         }
 
-        if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['jswechange_projectList']) ||
-            !is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['jswechange_projectList'])) {
-            $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['jswechange_projectList'] = [];
-        }
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['wechange_projectList'] ??= [];
     }
 );
