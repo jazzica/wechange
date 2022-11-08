@@ -7,11 +7,11 @@ services:
   JS\Wechange\:
     resource: '../Classes/*'
 
-  JS\Wechange\Controller\ProjectController:
-    arguments:
-      $cache: '@cache.projectList'
-
-  cache.projectList:
+  cache.wechange_projectList:
     class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
     factory: [ '@TYPO3\CMS\Core\Cache\CacheManager', 'getCache' ]
-    arguments: [ 'jswechange_projectList' ]
+    arguments: [ 'wechange_projectList' ]
+
+  JS\Wechange\Controller\ProjectController:
+    arguments:
+      $cache: '@cache.wechange_projectList'
