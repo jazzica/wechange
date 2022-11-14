@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace JS\Wechange\Controller;
 
 use JS\Wechange\Domain\Model\Filter\FilterFactory;
-use JS\Wechange\Domain\Repository\ProjectRepository;
+use JS\Wechange\Domain\Repository\EventRepository;
 use JS\Wechange\Service\CachingService;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 
-class ProjectController extends AbstractFilterController
+class EventController extends AbstractFilterController
 {
-    protected ProjectRepository $projectRepository;
+    protected EventRepository $eventRepository;
 
     /**
      * @codeCoverageIgnore
@@ -19,22 +19,22 @@ class ProjectController extends AbstractFilterController
     public function __construct(
         FrontendInterface $cache,
         FilterFactory $filterFactory,
-        ProjectRepository $projectRepository,
+        EventRepository $eventRepository,
         CachingService $cachingService
     ) {
         parent::__construct($cache, $filterFactory, $cachingService);
 
-        $this->projectRepository = $projectRepository;
+        $this->eventRepository = $eventRepository;
     }
 
     public function getCachePrefix(): string
     {
-        return 'projectList_';
+        return 'eventList_';
     }
 
     public function assignObjects(): void
     {
-        $projectFilter = $this->filterFactory->makeProjectFilter($this->settings['filter']);
-        $this->view->assign('projects', $this->projectRepository->findForFilter($projectFilter));
+        $eventFilter = $this->filterFactory->makeEventFilter($this->settings['filter']);
+        $this->view->assign('events', $this->eventRepository->findForFilter($eventFilter));
     }
 }

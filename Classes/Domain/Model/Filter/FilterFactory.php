@@ -36,4 +36,14 @@ class FilterFactory
             $filterSettings['orderDir']
         );
     }
+
+    public function makeEventFilter(array $filterSettings): EventFilter
+    {
+        return new EventFilter(
+            (int)$filterSettings['limit'],
+            $filterSettings['orderBy'],
+            $filterSettings['orderDir'],
+            (bool)$filterSettings['onlyUpcoming']
+        );
+    }
 }

@@ -1,9 +1,4 @@
 <?php
-/**
- * Date: 04/2020
- *
- * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
- */
 
 declare(strict_types = 1);
 
@@ -11,14 +6,13 @@ namespace JS\Wechange\Domain\Model\Filter;
 
 use JS\Wechange\Domain\Model\Coordinate;
 
-class MapFilter implements FilterInterface
+class MapFilter extends AbstractFilter
 {
     private bool $showPeople;
     private bool $showEvents;
     private bool $showProjects;
     private bool $showGroups;
     private bool $showIdeas;
-    private int $limit;
     private int $group;
 
     private Coordinate $neCoordinates;

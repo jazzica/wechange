@@ -7,10 +7,10 @@ namespace JS\Wechange\Domain\Repository;
 /**
  * @codeCoverageIgnore
  */
-class ProjectRepository extends AbstractSortableRepository
+class EventRepository extends AbstractSortableRepository
 {
     public function getApiSlug(): string
     {
-        return 'projects/';
+        return 'events/';
     }
 }

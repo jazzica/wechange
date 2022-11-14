@@ -5,18 +5,14 @@
 
 <f:section name="main">
     <div class="row row-cols-1 row-cols-md-4">
-        <f:for as="project" each="{projects}">
+        <f:for as="event" each="{events}">
             <div class="col">
                 <div class="card">
-                    <f:if condition="{project.avatar}">
-                        <img src="{project.avatar}" class="card-img-top" alt="{project.name}">
-                    </f:if>
                     <div class="card-body">
-                        <h5 class="card-title">{project.name}</h5>
-                        <p class="card-text">{project.description}</p>
+                        <h5 class="card-title">{event.title}</h5>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">{project.website}</small>
+                        <small class="text-muted"><f:link.typolink parameter="{event.url}" target="_blank">{event.url}</f:link.typolink></small>
                     </div>
                 </div>
             </div>

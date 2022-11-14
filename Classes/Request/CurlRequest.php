@@ -11,16 +11,12 @@ class CurlRequest
 {
     private $handle;
 
-    public function __construct()
-    {
-        $this->handle = curl_init();
-    }
-
     /**
      * @return bool|string
      */
     public function execute(string $url)
     {
+        $this->handle = curl_init();
         curl_setopt($this->handle, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->handle, CURLOPT_URL, $url);
         return curl_exec($this->handle);

@@ -5,6 +5,9 @@
             <trans-unit id="project.name" xml:space="preserve">
 				<source>Name</source>
 			</trans-unit>
+			<trans-unit id="event.title" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
 
 			<trans-unit id="typoscript.view.templateRootPath" xml:space="preserve">
 				<source>Path to template root (FE)</source>
@@ -80,6 +83,34 @@
 			</trans-unit>
             <trans-unit id="plugin.projects.filter.limit" xml:space="preserve">
 				<source>Limit</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.events" xml:space="preserve">
+				<source>WECHANGE: Events</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.description" xml:space="preserve">
+				<source>Display a WECHANGE event list. Configure filters, e.g. limit, upcoming.</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.orderBy" xml:space="preserve">
+				<source>Order by</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.orderDir" xml:space="preserve">
+				<source>Order direction</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.orderDir.asc" xml:space="preserve">
+				<source>ASC</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.orderDir.desc" xml:space="preserve">
+				<source>DESC</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.limit" xml:space="preserve">
+				<source>Limit</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.timeSpan" xml:space="preserve">
+				<source>time span</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.onlyUpcoming" xml:space="preserve">
+				<source>only upcoming</source>
 			</trans-unit>
 
             <trans-unit id="plugin.map" xml:space="preserve">

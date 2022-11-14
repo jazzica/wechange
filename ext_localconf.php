@@ -13,6 +13,14 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Wechange',
+            'Events',
+            [
+                \JS\Wechange\Controller\EventController::class => 'list'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Wechange',
             'Map',
             [
                 \JS\Wechange\Controller\MapController::class => 'show'
@@ -33,6 +41,6 @@ call_user_func(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:wechange/Configuration/TsConfig/All.tsconfig">'
         );
 
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['wechange_projectList'] ??= [];
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['wechange_apirequests'] ??= [];
     }
 );

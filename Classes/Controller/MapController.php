@@ -1,17 +1,10 @@
 <?php
-/**
- * Date: 04/2020
- *
- * @author Jessica Schlierenkamp <mail@schlierenkamp.de>
- */
 
 declare(strict_types=1);
 
 namespace JS\Wechange\Controller;
 
-use JS\Wechange\Domain\Model\Coordinate;
 use JS\Wechange\Domain\Model\Filter\FilterFactory;
-use JS\Wechange\Domain\Model\Filter\MapFilter;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class MapController extends ActionController
