@@ -5,14 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/jazzica/wechange/compare/1.1.0...develop)
+## [Unreleased](https://github.com/jazzica/wechange/compare/2.0.0...develop)
+
+## [2.0.0](https://github.com/jazzica/wechange/compare/1.1.0...2.0.0)
 
 ### Changed
 
 - **BREAKING:** moved configuration of API baseUrl from typoScript to ext_conf_template
+- **BREAKING:** removed TYPO3 9.5 LTS support
 
 ### Added
 
+- TYPO3 11.5 LTS support
 - unit tests
 - possibility to deactivate api request caching
 - logging for project, event, confrence, note & statistics controller
