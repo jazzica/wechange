@@ -1,0 +1,4 @@
+##########################
+#### CONTENT ELEMENTS ####
+##########################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:wechange/Configuration/TsConfig/Page/Mod/Wizards" extensions="tsconfig">

@@ -1,0 +1,96 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Function</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.filter.group>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.filter.group
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.group>
+                    <settings.filter.orderBy>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xml:plugin.notes.filter.orderBy
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:note.title
+                                        </numIndex>
+                                        <numIndex index="1">title</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.orderBy>
+                    <settings.filter.orderDir>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xml:plugin.notes.filter.orderDir
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.filter.orderDir.asc
+                                        </numIndex>
+                                        <numIndex index="1">ASC</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.filter.orderDir.desc
+                                        </numIndex>
+                                        <numIndex index="1">DESC</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.orderDir>
+                    <settings.filter.limit>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.filter.limit
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>int</eval>
+                                <default>10</default>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.limit>
+                    <settings.filter.offset>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.filter.offset
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>int</eval>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.offset>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

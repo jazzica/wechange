@@ -17,10 +17,6 @@ plugin.tx_wechange {
     }
 
     settings {
-        api {
-            baseUrl = {$plugin.tx_wechange.settings.api.baseUrl}
-        }
-
         map {
             baseUrl = {$plugin.tx_wechange.settings.map.baseUrl}
             coordinates {
@@ -33,6 +29,7 @@ plugin.tx_wechange {
 
         cache {
             lifetime = {$plugin.tx_wechange.settings.cache.lifetime}
+            inactive = {$plugin.tx_wechange.settings.cache.inactive}
         }
     }
 }

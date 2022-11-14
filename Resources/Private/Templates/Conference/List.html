@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <div class="row row-cols-1 row-cols-md-4">
+        <f:for as="conference" each="{conferences}">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{conference.name}</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"><f:link.typolink parameter="{conference.url}" target="_blank">{conference.url}</f:link.typolink></small>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</f:section>
+
+</html>

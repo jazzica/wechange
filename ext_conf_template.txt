@@ -1,0 +1,2 @@
+# cat=API; type=string; label=Base url for the wechange API
+baseUrl = https://wechange.de/api/v2/
