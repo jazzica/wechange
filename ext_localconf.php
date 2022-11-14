@@ -37,6 +37,14 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Wechange',
+            'Statistics',
+            [
+                \JS\Wechange\Controller\StatisticController::class => 'list'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Wechange',
             'Map',
             [
                 \JS\Wechange\Controller\MapController::class => 'show'

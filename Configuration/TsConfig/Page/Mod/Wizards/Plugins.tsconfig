@@ -39,6 +39,15 @@ mod.wizards {
                         list_type = wechange_notes
                     }
                 }
+                statistics {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.statistics
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.statistics.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_statistics
+                    }
+                }
                 map {
                     iconIdentifier = wechange-plugin
                     title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map

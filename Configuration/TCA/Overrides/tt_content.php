@@ -56,6 +56,14 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wechange_not
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Wechange',
+    'Statistics',
+    'LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.statistics'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['wechange_statistics'] =
+    'recursive,select_key,pages';
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Wechange',
     'Map',
     'LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map'
 );

@@ -69,4 +69,9 @@ class FilterFactory
             $filterSettings['orderDir']
         );
     }
+
+    public function makeStatisticFilter(): StatisticFilter
+    {
+        return new StatisticFilter();
+    }
 }

@@ -33,7 +33,7 @@ class ApiQueryService
     /**
      * @throws \JsonException
      */
-    public function makeRequest(string $requestSlug): array
+    public function makeRequest(string $requestSlug, string $resultKey = 'results'): array
     {
         $requestUrl = $this->baseUrl . $requestSlug;
 
@@ -51,6 +51,15 @@ class ApiQueryService
             );
         }
 
-        return json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR)->results ?? [];
+        if ($resultKey) {
+            return json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR)->$resultKey ?? [];
+        }
+
+        return json_decode(
+            json_encode(json_decode($cURLResult, false, 512, JSON_THROW_ON_ERROR), JSON_THROW_ON_ERROR),
+            true,
+            512,
+            JSON_THROW_ON_ERROR
+        ) ?? [];
     }
 }

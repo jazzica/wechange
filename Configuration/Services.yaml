@@ -27,3 +27,7 @@ services:
   JS\Wechange\Controller\NoteController:
     arguments:
       $cache: '@cache.wechange_apirequests'
+
+  JS\Wechange\Controller\StatisticController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'

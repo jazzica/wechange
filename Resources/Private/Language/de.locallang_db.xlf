@@ -177,6 +177,13 @@
 				<target>Gruppe</target>
 			</trans-unit>
 
+			<trans-unit id="plugin.statistics" xml:space="preserve">
+				<target>WECHANGE: Statistiken</target>
+			</trans-unit>
+			<trans-unit id="plugin.statistics.description" xml:space="preserve">
+				<target>Zeigt WECHANGE Statistiken.</target>
+			</trans-unit>
+
             <trans-unit id="plugin.map" xml:space="preserve">
 				<target>WECHANGE: Karte</target>
 			</trans-unit>
