@@ -13,9 +13,13 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Added
 
-- missing unit tests
+- unit tests
 - possibility to deactivate api request caching
-- logging for project controller
+- logging for project, event, confrence, note & statistics controller
+- event list
+- conference list
+- note list
+- statistics
 
 ## [1.1.0](https://github.com/jazzica/wechange/compare/1.0.1...1.1.0) - 2022-11-03
 
@@ -60,3 +64,4 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [1.0.1]: https://github.com/jazzica/wechange/compare/1.0.0...1.0.1
 
 [1.0.0]: https://github.com/jazzica/wechange/compare/b4d22a38...1.0.0
+
