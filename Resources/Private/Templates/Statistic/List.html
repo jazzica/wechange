@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <div class="row row-cols-1 row-cols-md-4">
+        <ul>
+            <li>{f:translate(key: 'statistics.groups')}: {statistics.groups}</li>
+            <li>{f:translate(key: 'statistics.projects')}: {statistics.projects}</li>
+            <li>{f:translate(key: 'statistics.users_registered')}: {statistics.users_registered}</li>
+            <li>{f:translate(key: 'statistics.users_active')}: {statistics.users_active}</li>
+            <li>{f:translate(key: 'statistics.events_upcoming')}: {statistics.events_upcoming}</li>
+            <li>{f:translate(key: 'statistics.notes')}: {statistics.notes}</li>
+        </ul>
+    </div>
+</f:section>
+
+</html>

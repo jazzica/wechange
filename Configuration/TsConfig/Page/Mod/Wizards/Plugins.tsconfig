@@ -1,0 +1,64 @@
+mod.wizards {
+    newContentElement.wizardItems {
+        wechange.header = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.wizard.tab.header
+        wechange {
+            elements {
+                projects {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_projects
+                    }
+                }
+                events {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.events
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.events.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_events
+                    }
+                }
+                conferences {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.conferences
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.conferences.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_conferences
+                    }
+                }
+                notes {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_notes
+                    }
+                }
+                statistics {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.statistics
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.statistics.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_statistics
+                    }
+                }
+                map {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_map
+                    }
+                }
+            }
+            show = *
+        }
+    }
+}

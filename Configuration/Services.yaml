@@ -7,11 +7,27 @@ services:
   JS\Wechange\:
     resource: '../Classes/*'
 
-  JS\Wechange\Controller\ProjectController:
-    arguments:
-      $cache: '@cache.projectList'
-
-  cache.projectList:
+  cache.wechange_apirequests:
     class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
     factory: [ '@TYPO3\CMS\Core\Cache\CacheManager', 'getCache' ]
-    arguments: [ 'jswechange_projectList' ]
+    arguments: [ 'wechange_apirequests' ]
+
+  JS\Wechange\Controller\ProjectController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'
+
+  JS\Wechange\Controller\EventController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'
+
+  JS\Wechange\Controller\ConferenceController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'
+
+  JS\Wechange\Controller\NoteController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'
+
+  JS\Wechange\Controller\StatisticController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-17T20:40:35Z">
+        <body>
+            <trans-unit id="statistics.groups" xml:space="preserve">
+                <source>Groups</source>
+            </trans-unit>
+            <trans-unit id="statistics.projects" xml:space="preserve">
+                <source>Projects</source>
+            </trans-unit>
+            <trans-unit id="statistics.users_registered" xml:space="preserve">
+                <source>Registered Users</source>
+            </trans-unit>
+            <trans-unit id="statistics.users_active" xml:space="preserve">
+                <source>Active Users</source>
+            </trans-unit>
+            <trans-unit id="statistics.events_upcoming" xml:space="preserve">
+                <source>Upcoming Events</source>
+            </trans-unit>
+            <trans-unit id="statistics.notes" xml:space="preserve">
+                <source>Notes</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

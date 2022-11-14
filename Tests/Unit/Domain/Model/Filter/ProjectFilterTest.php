@@ -45,7 +45,7 @@ class ProjectFilterTest extends UnitTestCase
                 'limit=5'
             ],
             'ProjectFilter with different options set' => [
-                new ProjectFilter(1012, 'test-tag', 5, 'name'),
+                new ProjectFilter(1012, 'test-tag', 5, 0, 'name'),
                 'parent=1012&tags=test-tag&limit=5'
             ]
         ];
