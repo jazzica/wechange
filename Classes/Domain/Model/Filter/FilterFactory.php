@@ -32,6 +32,7 @@ class FilterFactory
             (int)$filterSettings['parent'],
             $filterSettings['tag'],
             (int)$filterSettings['limit'],
+            (int)$filterSettings['offset'],
             $filterSettings['orderBy'],
             $filterSettings['orderDir']
         );
@@ -41,6 +42,7 @@ class FilterFactory
     {
         return new EventFilter(
             (int)$filterSettings['limit'],
+            (int)$filterSettings['offset'],
             $filterSettings['orderBy'],
             $filterSettings['orderDir'],
             (bool)$filterSettings['onlyUpcoming']

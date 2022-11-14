@@ -84,6 +84,9 @@
             <trans-unit id="plugin.projects.filter.limit" xml:space="preserve">
 				<target>max. Anzahl an Ergebnissen</target>
 			</trans-unit>
+			<trans-unit id="plugin.projects.filter.offset" xml:space="preserve">
+				<target>Offset</target>
+			</trans-unit>
 
 			<trans-unit id="plugin.events" xml:space="preserve">
 				<target>WECHANGE: Veranstaltungen</target>
@@ -105,6 +108,9 @@
 			</trans-unit>
 			<trans-unit id="plugin.events.filter.limit" xml:space="preserve">
 				<target>max. Anzahl an Ergebnissen</target>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.offset" xml:space="preserve">
+				<target>Offset</target>
 			</trans-unit>
 			<trans-unit id="plugin.events.filter.timeSpan" xml:space="preserve">
 				<target>Zeitraum</target>

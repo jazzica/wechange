@@ -84,6 +84,9 @@
             <trans-unit id="plugin.projects.filter.limit" xml:space="preserve">
 				<source>Limit</source>
 			</trans-unit>
+			<trans-unit id="plugin.projects.filter.offset" xml:space="preserve">
+				<source>Offset</source>
+			</trans-unit>
 
 			<trans-unit id="plugin.events" xml:space="preserve">
 				<source>WECHANGE: Events</source>
@@ -105,6 +108,9 @@
 			</trans-unit>
 			<trans-unit id="plugin.events.filter.limit" xml:space="preserve">
 				<source>Limit</source>
+			</trans-unit>
+			<trans-unit id="plugin.events.filter.offset" xml:space="preserve">
+				<source>Offset</source>
 			</trans-unit>
 			<trans-unit id="plugin.events.filter.timeSpan" xml:space="preserve">
 				<source>time span</source>

@@ -13,11 +13,13 @@ class EventFilter extends AbstractSortableFilter
      */
     public function __construct(
         int $limit = 10,
+        int $offset = 0,
         string $orderBy = '',
         string $orderDir = self::ORDER_ASC,
         bool $onlyUpcoming = false
     ) {
         $this->limit = $limit;
+        $this->offset = $offset;
         $this->orderBy = $orderBy;
         $this->orderDir = $orderDir;
         $this->onlyUpcoming = $onlyUpcoming;
@@ -36,6 +38,10 @@ class EventFilter extends AbstractSortableFilter
 
         if ($this->isOnlyUpcoming()) {
             $queryString[] = 'upcoming=true';
+        }
+
+        if ($offset = $this->getOffset()) {
+            $queryString[] = 'offset=' . $offset;
         }
 
         return implode('&', $queryString ?? []);

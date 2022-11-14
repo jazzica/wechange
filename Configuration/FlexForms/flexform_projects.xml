@@ -7,6 +7,32 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <settings.filter.limit>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects.filter.limit
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim,int</eval>
+                                <default>10</default>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.limit>
+                    <settings.filter.offset>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects.filter.offset
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>int</eval>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.offset>
                     <settings.filter.parent>
                         <TCEforms>
                             <label>
@@ -75,19 +101,6 @@
                             </config>
                         </TCEforms>
                     </settings.filter.orderDir>
-                    <settings.filter.limit>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.projects.filter.limit
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <size>5</size>
-                                <eval>trim,int</eval>
-                                <default>10</default>
-                            </config>
-                        </TCEforms>
-                    </settings.filter.limit>
                 </el>
             </ROOT>
         </sDEF>

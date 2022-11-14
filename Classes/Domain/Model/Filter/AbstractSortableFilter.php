@@ -11,20 +11,33 @@ abstract class AbstractSortableFilter extends AbstractFilter implements Sortable
 
     protected string $orderBy;
     protected string $orderDir;
+    protected int $offset;
 
-    /**
-     * @return string
-     */
     public function getOrderBy(): string
     {
         return $this->orderBy ?? self::ORDER_ASC;
     }
 
-    /**
-     * @return string
-     */
     public function getOrderDir(): string
     {
         return $this->orderDir;
+    }
+
+    public function getOffset(): int
+    {
+        return $this->offset ?? 0;
+    }
+
+    public function buildQueryString(): string
+    {
+        if ($limit = $this->getLimit()) {
+            $queryString[] = 'limit=' . $limit;
+        }
+
+        if ($offset = $this->getOffset()) {
+            $queryString[] = 'offset=' . $offset;
+        }
+
+        return implode('&', $queryString ?? []);
     }
 }

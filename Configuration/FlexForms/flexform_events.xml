@@ -59,11 +59,24 @@
                             <config>
                                 <type>input</type>
                                 <size>5</size>
-                                <eval>trim,int</eval>
+                                <eval>int</eval>
                                 <default>10</default>
                             </config>
                         </TCEforms>
                     </settings.filter.limit>
+                    <settings.filter.offset>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.events.filter.offset
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>int</eval>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.filter.offset>
                     <settings.filter.onlyUpcoming>
                         <TCEforms>
                             <label>

@@ -16,12 +16,14 @@ class ProjectFilter extends AbstractSortableFilter
         int $parent = 0,
         string $tag = '',
         int $limit = 10,
+        int $offset = 0,
         string $orderBy = '',
         string $orderDir = self::ORDER_ASC
     ) {
         $this->parent = $parent;
         $this->tag = $tag;
         $this->limit = $limit;
+        $this->offset = $offset;
         $this->orderBy = $orderBy;
         $this->orderDir = $orderDir;
     }
@@ -48,6 +50,10 @@ class ProjectFilter extends AbstractSortableFilter
 
         if ($limit = $this->getLimit()) {
             $queryString[] = 'limit=' . $limit;
+        }
+
+        if ($offset = $this->getOffset()) {
+            $queryString[] = 'offset=' . $offset;
         }
 
         return implode('&', $queryString ?? []);
