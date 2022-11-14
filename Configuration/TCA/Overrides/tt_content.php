@@ -43,6 +43,19 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wechange_con
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Wechange',
+    'Notes',
+    'LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['wechange_notes'] =
+    'recursive,select_key,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wechange_notes'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+    'wechange_notes',
+    'FILE:EXT:wechange/Configuration/FlexForms/flexform_notes.xml'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Wechange',
     'Map',
     'LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map'
 );

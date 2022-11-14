@@ -23,3 +23,7 @@ services:
   JS\Wechange\Controller\ConferenceController:
     arguments:
       $cache: '@cache.wechange_apirequests'
+
+  JS\Wechange\Controller\NoteController:
+    arguments:
+      $cache: '@cache.wechange_apirequests'

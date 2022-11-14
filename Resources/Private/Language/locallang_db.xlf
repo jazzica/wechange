@@ -146,6 +146,37 @@
 				<source>Offset</source>
 			</trans-unit>
 
+			<trans-unit id="note.title" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes" xml:space="preserve">
+				<source>WECHANGE: Notes</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.description" xml:space="preserve">
+				<source>Display a WECHANGE note list. Configure filters, e.g. limit, offset, group.</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderBy" xml:space="preserve">
+				<source>Order by</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderDir" xml:space="preserve">
+				<source>Order direction</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderDir.asc" xml:space="preserve">
+				<source>ASC</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderDir.desc" xml:space="preserve">
+				<source>DESC</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.limit" xml:space="preserve">
+				<source>Limit</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.offset" xml:space="preserve">
+				<source>Offset</source>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.group" xml:space="preserve">
+				<source>Group</source>
+			</trans-unit>
+
             <trans-unit id="plugin.map" xml:space="preserve">
 				<source>WECHANGE: Map</source>
 			</trans-unit>

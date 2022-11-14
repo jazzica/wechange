@@ -58,4 +58,15 @@ class FilterFactory
             $filterSettings['orderDir']
         );
     }
+
+    public function makeNoteFilter(array $filterSettings): NoteFilter
+    {
+        return new NoteFilter(
+            (int)$filterSettings['group'],
+            (int)$filterSettings['limit'],
+            (int)$filterSettings['offset'],
+            $filterSettings['orderBy'],
+            $filterSettings['orderDir']
+        );
+    }
 }

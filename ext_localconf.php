@@ -29,6 +29,14 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Wechange',
+            'Notes',
+            [
+                \JS\Wechange\Controller\NoteController::class => 'list'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Wechange',
             'Map',
             [
                 \JS\Wechange\Controller\MapController::class => 'show'

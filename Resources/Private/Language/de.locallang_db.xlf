@@ -146,6 +146,37 @@
 				<target>Offset</target>
 			</trans-unit>
 
+			<trans-unit id="note.title" xml:space="preserve">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes" xml:space="preserve">
+				<target>WECHANGE: Notizen</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.description" xml:space="preserve">
+				<target>Zeigt eine WECHANGE Notizenliste. Mögliche Filter für Limit, Offset, Gruppe etc.</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderBy" xml:space="preserve">
+				<target>Sortieren nach</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderDir" xml:space="preserve">
+				<target>Sortierrichung</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderDir.asc" xml:space="preserve">
+				<target>aufsteigend</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.orderDir.desc" xml:space="preserve">
+				<target>absteigent</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.limit" xml:space="preserve">
+				<target>max. Anzahl an Ergebnissen</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.offset" xml:space="preserve">
+				<target>Offset</target>
+			</trans-unit>
+			<trans-unit id="plugin.notes.filter.group" xml:space="preserve">
+				<target>Gruppe</target>
+			</trans-unit>
+
             <trans-unit id="plugin.map" xml:space="preserve">
 				<target>WECHANGE: Karte</target>
 			</trans-unit>

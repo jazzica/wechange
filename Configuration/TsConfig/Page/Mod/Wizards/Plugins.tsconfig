@@ -30,6 +30,15 @@ mod.wizards {
                         list_type = wechange_conferences
                     }
                 }
+                notes {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.notes.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_notes
+                    }
+                }
                 map {
                     iconIdentifier = wechange-plugin
                     title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map
