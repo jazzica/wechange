@@ -18,10 +18,8 @@ class EventFilter extends AbstractSortableFilter
         string $orderDir = self::ORDER_ASC,
         bool $onlyUpcoming = false
     ) {
-        $this->limit = $limit;
-        $this->offset = $offset;
-        $this->orderBy = $orderBy;
-        $this->orderDir = $orderDir;
+        parent::__construct($limit, $offset, $orderBy, $orderDir);
+
         $this->onlyUpcoming = $onlyUpcoming;
     }
 

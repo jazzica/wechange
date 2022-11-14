@@ -20,12 +20,10 @@ class ProjectFilter extends AbstractSortableFilter
         string $orderBy = '',
         string $orderDir = self::ORDER_ASC
     ) {
+        parent::__construct($limit, $offset, $orderBy, $orderDir);
+
         $this->parent = $parent;
         $this->tag = $tag;
-        $this->limit = $limit;
-        $this->offset = $offset;
-        $this->orderBy = $orderBy;
-        $this->orderDir = $orderDir;
     }
 
     public function getParent(): int

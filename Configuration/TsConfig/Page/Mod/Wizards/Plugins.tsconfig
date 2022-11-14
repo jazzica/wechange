@@ -21,6 +21,15 @@ mod.wizards {
                         list_type = wechange_events
                     }
                 }
+                conferences {
+                    iconIdentifier = wechange-plugin
+                    title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.conferences
+                    description = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.conferences.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = wechange_conferences
+                    }
+                }
                 map {
                     iconIdentifier = wechange-plugin
                     title = LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map

@@ -30,6 +30,19 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wechange_eve
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Wechange',
+    'Conferences',
+    'LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.conferences'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['wechange_conferences'] =
+    'recursive,select_key,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wechange_conferences'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+    'wechange_conferences',
+    'FILE:EXT:wechange/Configuration/FlexForms/flexform_conferences.xml'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Wechange',
     'Map',
     'LLL:EXT:wechange/Resources/Private/Language/locallang_db.xlf:plugin.map'
 );

@@ -48,4 +48,14 @@ class FilterFactory
             (bool)$filterSettings['onlyUpcoming']
         );
     }
+
+    public function makeConferenceFilter(array $filterSettings): ConferenceFilter
+    {
+        return new ConferenceFilter(
+            (int)$filterSettings['limit'],
+            (int)$filterSettings['offset'],
+            $filterSettings['orderBy'],
+            $filterSettings['orderDir']
+        );
+    }
 }

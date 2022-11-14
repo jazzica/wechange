@@ -21,6 +21,14 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Wechange',
+            'Conferences',
+            [
+                \JS\Wechange\Controller\ConferenceController::class => 'list'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Wechange',
             'Map',
             [
                 \JS\Wechange\Controller\MapController::class => 'show'

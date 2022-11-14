@@ -2,13 +2,6 @@
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" date="2020-04-17T20:40:35Z">
         <body>
-            <trans-unit id="project.name" xml:space="preserve">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="event.title" xml:space="preserve">
-				<source>Name</source>
-			</trans-unit>
-
 			<trans-unit id="typoscript.view.templateRootPath" xml:space="preserve">
 				<source>Path to template root (FE)</source>
 			</trans-unit>
@@ -57,6 +50,9 @@
 				<source>WECHANGE</source>
 			</trans-unit>
 
+			<trans-unit id="project.name" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
 			<trans-unit id="plugin.projects" xml:space="preserve">
 				<source>WECHANGE: Projects</source>
 			</trans-unit>
@@ -88,6 +84,9 @@
 				<source>Offset</source>
 			</trans-unit>
 
+			<trans-unit id="event.title" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
 			<trans-unit id="plugin.events" xml:space="preserve">
 				<source>WECHANGE: Events</source>
 			</trans-unit>
@@ -117,6 +116,34 @@
 			</trans-unit>
 			<trans-unit id="plugin.events.filter.onlyUpcoming" xml:space="preserve">
 				<source>only upcoming</source>
+			</trans-unit>
+
+			<trans-unit id="conference.name" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences" xml:space="preserve">
+				<source>WECHANGE: Conferences</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.description" xml:space="preserve">
+				<source>Display a WECHANGE conference list. Configure filters, e.g. limit, offset.</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.filter.orderBy" xml:space="preserve">
+				<source>Order by</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.filter.orderDir" xml:space="preserve">
+				<source>Order direction</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.filter.orderDir.asc" xml:space="preserve">
+				<source>ASC</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.filter.orderDir.desc" xml:space="preserve">
+				<source>DESC</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.filter.limit" xml:space="preserve">
+				<source>Limit</source>
+			</trans-unit>
+			<trans-unit id="plugin.conferences.filter.offset" xml:space="preserve">
+				<source>Offset</source>
 			</trans-unit>
 
             <trans-unit id="plugin.map" xml:space="preserve">
