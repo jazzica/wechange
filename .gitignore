@@ -16,3 +16,4 @@ composer.lock
 .project
 .webprj
 nbproject
+/docker-compose.yml

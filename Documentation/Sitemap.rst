@@ -6,4 +6,4 @@
 Sitemap
 =======
 
-.. template 'sitemap.html' will insert the toctree as a sitemap here
+.. template 'sitemap.html' will insert the doctree as a sitemap here
