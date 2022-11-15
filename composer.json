@@ -14,24 +14,19 @@
         "GPL-2.0-or-later"
     ],
     "support": {
-        "issues": "https://github.com/jazzica/wechange/issues"
-    },
-    "config": {
-        "platform": {
-            "php": "7.4"
-        },
-        "optimize-autoloader": true
+        "source": "https://github.com/jazzica/wechange",
+        "issues": "https://github.com/jazzica/wechange/issues",
+        "docs": "https://docs.typo3.org/p/jazzica/wechange/main/en-us/"
     },
     "require": {
-        "php": ">=7.4.0",
+        "php": "^7.4 || ^8.0",
         "ext-json": "*",
+        "ext-curl": "*",
         "typo3/cms-backend": "^10.4 || ^11.5",
         "typo3/cms-core": "^10.4 || ^11.5",
         "typo3/cms-extbase": "^10.4 || ^11.5",
-        "typo3/cms-extensionmanager": "^10.4 || ^11.5",
         "typo3/cms-fluid": "^10.4 || ^11.5",
-        "typo3/cms-frontend": "^10.4 || ^11.5",
-        "typo3/cms-install": "^10.4 || ^11.5"
+        "typo3/cms-frontend": "^10.4 || ^11.5"
     },
     "autoload": {
         "psr-4": {
