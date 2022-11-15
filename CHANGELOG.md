@@ -5,9 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/jazzica/wechange/compare/2.0.0...develop)
+## [Unreleased]
 
-## [2.0.0](https://github.com/jazzica/wechange/compare/1.1.0...2.0.0)
+## [2.0.1] - 2022-11-15
+
+### Changed
+- updated Readme
+- updated documentation
+
+## [2.0.0] - 2022-11-14
 
 ### Changed
 
@@ -25,7 +31,7 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - note list
 - statistics
 
-## [1.1.0](https://github.com/jazzica/wechange/compare/1.0.1...1.1.0) - 2022-11-03
+## [1.1.0] - 2022-11-03
 
 ### Added
 
@@ -63,7 +69,15 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - First release of the extension
 
-[unreleased]: https://github.com/jazzica/wechange/compare/1.0.1...HEAD
+[unreleased]: https://github.com/jazzica/wechange/compare/2.0.1...develop
+
+[2.0.1]: https://github.com/jazzica/wechange/compare/2.0.0...2.0.1
+
+[2.0.0]: https://github.com/jazzica/wechange/compare/1.1.1...2.0.0
+
+[1.1.1]: https://github.com/jazzica/wechange/compare/1.1.0...1.1.1
+
+[1.1.0]: https://github.com/jazzica/wechange/compare/1.0.1...1.1.0
 
 [1.0.1]: https://github.com/jazzica/wechange/compare/1.0.0...1.0.1
 
