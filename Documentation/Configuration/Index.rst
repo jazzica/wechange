@@ -9,14 +9,29 @@ Configuration
 
 Target group: **Developers, Integrators**
 
-The extension gets by with very little configuration.
-If you want to connect to a custom platform you need to provide the baseUrl to the API and the map.
-You may also change the default map section.
-Otherwise the defaults will suffice and you only need to include the static TypoScript template.
+The extension gets by with very little configuration. As of now you may
 
+*  connect to a custom platform
+*  change the default map section
 
-Defaults
-===============
+For most cases the defaults will suffice and you only need to include the static TypoScript template.
+
+ExtensionConfiguration
+======================
+
+ext_conf_template.txt
+---------------------
+
+If you want to query a different API you need to change the baseUrl property.
+
++-----------------------------------+---------------+-----------------------------------------------------------------------+
+| Property                          | Data Type     |                                                                       |
++===================================+===============+=======================================================================+
+| baseUrl                           | string        | https://wechange.de/api/v2/                                           |
++-----------------------------------+---------------+-----------------------------------------------------------------------+
+
+TypoScript
+==========
 
 settings.map
 ---------
@@ -66,8 +81,6 @@ swLat & swLon the bottom left corner.
 .. code-block:: typoscript
 
  map {
-      baseUrl = https://wechange.de/
-
       coordinates {
              neLat = 50.66519
              neLon = 21.70898
@@ -75,24 +88,5 @@ swLat & swLon the bottom left corner.
              swLon = -2.19727
       }
  }
-
-settings.api
----------
-
-If you want to query data from a custom API you need to change the baseUrl.
-
-+-----------------------------------+---------------+-----------------------------------------------------------------------+
-| Property                          | Data Type     |                                                                       |
-+===================================+===============+=======================================================================+
-| baseUrl                           | string        | https://wechange.de/api/v2/                                           |
-+-----------------------------------+---------------+-----------------------------------------------------------------------+
-
-**Example:**
-
-.. code-block:: typoscript
-
- api {
-         baseUrl = https://wechange.de/api/v2/
-     }
 
 .. _configuration-typoscript:
